@@ -1,0 +1,8 @@
+footer{
+    background-color: var(--color3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--color1);
+    height: 10vh;
+}

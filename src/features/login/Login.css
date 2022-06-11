@@ -1,0 +1,125 @@
+section{
+    background-color: var(--color1);
+    display: flex;
+    flex-direction: column;
+	align-items: center;
+}
+
+#loginOverlay {
+    display: flex;
+    flex-direction: column;
+	justify-content: center;
+	align-items: center;
+    width: 71.8%;
+    height: 70vh;
+    border-left: 3px solid var(--color4); 
+    border-right: 3px solid var(--color4); 
+    height: 79vh;
+}
+
+#loginTitle{
+    background-color: var(--color4);
+    width: 55%;
+    height: 8vh;
+    border: 1px solid var(--color4);
+    display: flex;
+	align-items: center;
+}
+#loginTitle h1{
+    font-size: 1.6vw;
+    margin-left: 5vw;
+    color: var(--color1);
+}   
+
+#loginForm_overlay{
+    display: flex;
+    flex-direction: column;
+	justify-content: center;
+	align-items: center;
+    border: 1px solid black;
+    border-top: 1px solid var(--color4); 
+    width: 55%;
+    height: 76%;
+}
+
+#loginForm_overlay form input{
+    width: 18vw;
+    height: 5vh;
+    border: 2px solid var(--color4);   
+    border-radius: 9px;  
+    padding-left: 1vh;
+    padding-right: 5px;
+}
+
+#loginForm_overlay form :last-child button{
+    width: 7vw;
+    height: 5vh;
+    background-color: var(--color5);
+    color:  var(--baground2);   
+    border: 2px solid var(--color5);   
+    border-radius: 4px;  
+    /* margin-left: 6vw; */
+    font-size: 0.8vw;
+    color: var(--color1);
+}
+
+#submitBTN_overlay{
+    width: 100%;
+    display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+#loginForm_overlay p{
+    font-size: 1vw;
+    text-align: center;
+}
+#registerBTN_Overlay{
+    /* margin-top: ; */
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+	align-items: center;
+}
+
+#registerBTN{
+    margin-top: 1vw;
+    width: 7vw;
+    height: 5vh;
+    background-color: var(--color5);
+    color:  var(--baground2);   
+    border: 2px solid var(--color5);   
+    border-radius: 4px;  
+    font-size: 0.8vw;
+    color: var(--color1);
+}
+
+@media screen and (max-width: 601px){
+    #name a{
+        font-size: 2.5vw;
+    }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+
+}
+
+@media screen and (min-width: 1750px){
+
+}

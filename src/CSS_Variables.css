@@ -1,0 +1,12 @@
+:root {
+    scroll-behavior: smooth;
+    scroll-padding-top: 2rem;
+
+    --text1: rgb(255, 255, 255);
+    --text2: rgb(0, 0, 0);
+    --baground1: rgb(68, 51, 78);
+    --baground2: rgb(255, 255, 255);
+    --baground3: rgb(142, 143, 196);
+    --baground4: rgb(0, 0, 0);
+    --color1: rgb(180, 179, 180);
+}
