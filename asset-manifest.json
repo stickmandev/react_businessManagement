@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/react_businessManagement/static/css/main.01be9df4.css",
+    "main.js": "/react_businessManagement/static/js/main.c5a52f21.js",
+    "static/js/787.7f80f335.chunk.js": "/react_businessManagement/static/js/787.7f80f335.chunk.js",
+    "index.html": "/react_businessManagement/index.html",
+    "main.01be9df4.css.map": "/react_businessManagement/static/css/main.01be9df4.css.map",
+    "main.c5a52f21.js.map": "/react_businessManagement/static/js/main.c5a52f21.js.map",
+    "787.7f80f335.chunk.js.map": "/react_businessManagement/static/js/787.7f80f335.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.01be9df4.css",
+    "static/js/main.c5a52f21.js"
+  ]
+}
