@@ -5,20 +5,22 @@ import { store } from './Store_&_State/store';
 import reportWebVitals from './reportWebVitals';
 import './index.css';
 import Router from './router'
-import { AccessProvider } from './features/accessToken';
-
+import { AccessProvider } from './features/auths/accessToken';
+import {GlobalStateProvider} from './Store_&_State/GlobalState'
 const container = document.getElementById('root');
 const root = createRoot(container);
 
 root.render(
   <React.StrictMode>
-    <AccessProvider>
-    <Provider store={store}>
-      
-        <Router />
-      
-    </Provider>
-    </AccessProvider>
+    <GlobalStateProvider>
+      <AccessProvider>
+        <Provider store={store}>
+          
+            <Router />
+          
+        </Provider>
+      </AccessProvider>
+    </GlobalStateProvider>
   </React.StrictMode>
 );
 

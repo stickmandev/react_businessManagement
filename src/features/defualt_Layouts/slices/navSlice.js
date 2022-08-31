@@ -37,17 +37,17 @@ export const navSlice = createSlice({
 
     ledger_nav: (state) => {
         state.value =<> 
-            <li><NavLink href="">Home</NavLink></li>
+            {/* <li><NavLink href="">Home</NavLink></li> */}
         </>
     },
 
     clear_nav: (state) => {
-        state.value ={}
+        state.value =<></>
     },
   },
 })
 
 // Action creators are generated for each case reducer function
-export const { landing_page_nav, register_nav, login_nav, ledger_nav} = navSlice.actions
+export const { landing_page_nav, register_nav, login_nav, ledger_nav, clear_nav} = navSlice.actions
 
 export default navSlice.reducer

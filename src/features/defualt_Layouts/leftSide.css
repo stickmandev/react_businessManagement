@@ -1,0 +1,178 @@
+.active{
+    /* background-color: red; */
+}
+
+.active p{
+    color: red;
+}
+
+.leftactive{
+    background-color: red;
+}
+
+#row{
+    display: flex;
+    flex-direction: row;
+}
+
+#column{
+    display: flex;
+    flex-direction: column;
+}
+
+.leftNav_selected{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 16px;
+    /* padding-top: 1vh; */
+    padding-top: 0.5vw;
+    /* padding-bottom: 1vh; */
+    padding-bottom: 0.5vw;
+    padding-left: 0.7vw;
+    padding-right: 0.7vw;
+    margin-bottom: 0.5vw;
+}
+
+.leftNav_selected:hover{
+    background-color: var(--color5);
+    color: var(--color1);
+}
+
+#leftSpan{
+    background-Color: var(--color1);
+    width: 15%;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    font-size: 0.85vw;
+    font-weight: bold;
+    /* position: sticky;
+    top: 9vh; */
+}
+
+#leftSpan_Overlay{
+    /* border: 2px solid green; */
+    /* margin-top: 10vh; */
+    margin-top: 5.1vw;
+    /* position: fixed; */
+    position: sticky;
+    /* top: 20vh; */
+    top: 10vw;
+    left: 2.5vw;
+} 
+
+#leftSpan div div p{
+    /* margin-top: 0.6vh; */
+    margin-top: 0.3vw;
+}
+
+#leftNav_home{
+    background-image: url(../../icons/home.png);
+    background-repeat: no-repeat;
+    background-origin: content-box;
+    background-position: center center;
+    background-size: auto;
+
+    -moz-background-size: cover;
+    -ms-background-size: cover;
+    -o-background-size: cover;
+     background-size: cover;
+    width: 2.5vw;
+    height: 2.5vw;
+    display: flex;
+    justify-content: center;
+}
+
+#leftNav_cashbook{
+    background-image: url(../../icons/cashbook.png);
+    background-repeat: no-repeat;
+    background-origin: content-box;
+    background-position: center center;
+    background-size: auto;
+
+    -moz-background-size: cover;
+    -ms-background-size: cover;
+    -o-background-size: cover;
+     background-size: cover;
+    width: 2.5vw;
+    height: 2.5vw;
+    /* border: 2px solid black; */
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+}
+
+#leftNav_enventory{
+    background-image: url(../../icons/eventory.png);
+    background-repeat: no-repeat;
+    background-origin: content-box;
+    background-position: center center;
+    background-size: auto;
+
+    -moz-background-size: cover;
+    -ms-background-size: cover;
+    -o-background-size: cover;
+     background-size: cover;
+    width: 2.5vw;
+    height: 2.5vw;
+    /* border: 2px solid black; */
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+}
+
+#leftNav_keepsafe{
+    background-image: url(../../icons/keepsafe.png);
+    background-repeat: no-repeat;
+    background-origin: content-box;
+    background-position: center center;
+    background-size: auto;
+
+    -moz-background-size: cover;
+    -ms-background-size: cover;
+    -o-background-size: cover;
+     background-size: cover;
+    width: 2.5vw;
+    height: 2.5vw;
+    /* border: 2px solid black; */
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+}
+
+
+
+
+
+@media screen and (max-width: 601px){
+    #name a{
+        font-size: 2.5vw;
+    }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+
+}
+
+@media screen and (min-width: 1750px){
+
+}

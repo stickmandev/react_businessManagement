@@ -8,7 +8,7 @@ header{
     flex-direction: row;
 	justify-content: space-between;
 	align-items: center;
-    height: 11vh;
+    height: 4vw;
 } 
 
 #name{
@@ -16,7 +16,7 @@ header{
 }
 
 #name a{
-    font-size: 1vw;
+    font-size: 0.55vw;
     text-decoration: none;
     color: var(--text1);
 }

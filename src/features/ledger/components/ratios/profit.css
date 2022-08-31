@@ -1,0 +1,308 @@
+#profit_scroll_overlay{
+    /* height: 150vh; */
+    /* height: 75vw; */
+    height: 70vh;
+    background-color: var(--color1);
+    border-left: 3px solid var(--color4); 
+    border-right: 3px solid var(--color4); 
+    width: 100%;
+    display: flex;
+    /* flex-direction: column; */
+    /* align-items: center; */
+    /* overflow: scroll; */
+    overflow-y: scroll;
+    direction: rtl;
+}
+
+#profit_scroll_overlay::-webkit-scrollbar{
+    height: 1vw;
+    /* width: 0.8vw; */
+    width: 0.4vw;
+}
+
+/* #profit_scroll_overlay::-webkit-scrollbar-track{
+    box-shadow: inset 0px 0px 6px rgba(0, 0, 0, 0.3);
+    background-color: rgb(223, 217, 217);
+} */
+
+#profit_scroll_overlay::-webkit-scrollbar-thumb{
+    background-color: var(--color5);
+    border-radius: 10px;
+}
+
+#profit_scroll_overlay::-webkit-scrollbar-corner{
+    background-color: darkgray;
+}
+
+#profitOverlaay{
+    /* height: 150vh; */
+    /* height: 75vw; */
+    height: 75vw;
+    background-color: var(--color1);
+    /* border-left: 3px solid var(--color4);  */
+    /* border-right: 3px solid var(--color4);  */
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* overflow: scroll; */
+    direction: ltr;
+}
+
+
+/* FLAG............................................................................ */
+#ratio_Profit_flag{
+    /* margin-top: 8vh; */
+    margin-top: 4.1vw;
+    width: 62.4vw;
+    /* width: 88%; */
+    /* height: 27vh; */
+    height: 13.8vw;
+    background-color: green; 
+    border-bottom-left-radius: 21px;
+    border-top-left-radius: 21px;
+    border-top-right-radius: 21px;
+    color: var(--color1);
+    display: flex;
+    overflow: hidden;
+}
+
+#ratio_Profit_flag div{
+    padding-left: 1.2vw;
+    padding-right: 1vw;
+}
+
+#ratio_Profit_flag div:first-child{
+    padding-top: 4.2vh;
+    padding-left: 6vh;
+}
+
+#ratio_Profit_flag div:first-child h3{
+    font-size: 1.5vw;
+}
+
+#profitImg{
+    width: 27vw;
+    /* height: 8vh; */
+    /* height: 109%; */
+    height: 15vw;
+}
+
+#ratio_Profit_flag div:last-child{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin-top: 1vw;
+    margin-left: 1.8vw;
+}
+
+#ratio_Profit_flag div:last-child h1{
+    font-size: 5vw;
+    margin-left: 2.3vw;
+}
+
+#sub{
+    font-size: 2.3vw;
+}
+
+#ratio_Profit_flag div:last-child div:first-child {
+    /* border: 2px solid black; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    
+}
+
+#ratio_Profit_flag div:last-child div:first-child h3{
+    margin-top: -1vh;
+    margin-right: 4.4vh;
+    font-size: 1.1vw;
+}
+
+#ratio_Profit_flag div:last-child div:last-child {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    /* border: 2px solid black; */
+    /* padding-right: 0; */
+    padding-left: 0;
+    margin-top: 4.2vh;
+}
+
+#ratio_Profit_flag div:last-child span{
+    font-size: 0.8vw;
+    display: inline-block;
+    margin-left: 1.4vw;
+    margin-right: 0;
+    /* border: 2px solid red; */
+}
+
+/* ratio_Profit_text............................................................................ */
+#ratio_Profit_text{
+    margin-top: 8vh;
+    width: 85%;
+    border: 2px solid black;
+}
+
+#ratio_Profit_text p{
+    font-size: 1vw;
+}
+
+/* ratio table.................................................................................. */
+#ratio_table_background{
+    /* margin-top: 7vh; */
+    margin-top: 3.6vw;
+    /* margin-bottom: 7vh; */
+    margin-bottom: 3.6vw;
+    /* width: 88%; */
+    width: 62.4vw;
+    /* height: 63.5vh; */
+    height: 32.4vw;
+    background-color: rgb(228, 214, 241);
+    border-radius: 21px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#ratio_table{
+    /* background-color: red; */
+    /* border: 1px solid red; */
+    border-right: 1px solid black;
+    border-bottom: 1px solid black;
+    /* width: 82%; */
+    width: 51.2vw;
+    /* height: 80%; */
+    height: 25.9vw; 
+    /* overflow-y: overlay; */
+    overflow-y: scroll;
+    scrollbar-color: rebeccapurple green;
+    scrollbar-width: none;
+}
+
+#ratio_table::-webkit-scrollbar {
+    width: 0;  /* Remove scrollbar space */
+    background: transparent;  /* Optional: just make scrollbar invisible */
+}
+
+#rato_table_header{
+    /* border: 1px solid blue; */
+    display: flex;
+    flex-direction: row;
+    position: sticky;
+    top: 0;
+}
+
+#rato_table_header div{
+    border-left: 1px solid black;
+    border-bottom: 1px solid black;
+    /* height: 6vh; */
+    height: 3.1vw;
+    font-size: 1vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: var(--color1);
+}
+
+#headers_date{
+    /* width: 15%; */
+    width: 7.7vw;
+}
+
+.headers{
+    /* border: 1px solid black; */
+    width: 21%;
+}
+
+.headers_pecentage{
+    width: 11%;
+    text-align: center;
+}
+
+#rato_table_rows{
+    /* border: 1px solid blue; */
+    /* border: 1px solid black; */
+    display: flex;
+    flex-direction: row;
+}
+
+#rato_table_rows div{
+    border-left: 1px solid black;
+    border-bottom: 1px solid black;
+    height: 6vh;
+    height: 3.1vw;
+    font-size: 1vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: var(--color1);
+}
+
+#rato_table_rows_date{
+    width: 15%;
+}
+
+.rato_table_rows{
+    /* border: 1px solid black; */
+    width: 21%;
+}
+
+.rato_table_rows_pecentage{
+    width: 11%;
+    text-align: center;
+}
+
+#ratioTable_sideBar_overlay{
+    width: 1.2vw;
+    /* background-color: blue; */
+    /* border: 1px solid red; */
+    /* height: 80%; */
+    height: 25.9vw; 
+    margin-left: 1.5vw;
+    overflow-y: auto;
+    overflow-y: overlay;
+    /* scrollbar-width: 5vw; */
+    /* scrollbar-face-color: red; */
+    /* scrollbar-width: none; */
+    
+}
+
+#ratioTable_sideBar{
+    width: 0vw;
+    background-color: red;
+    /* border: 1px solid yellow; */
+    margin-top: 6vh;
+}
+
+
+#ratioTable_sideBar_overlay::-webkit-scrollbar{
+    height: 1.5vh;
+    /* height: .75vw; */
+    width: 1.2vw;
+}
+
+#ratioTable_sideBar_overlay::-webkit-scrollbar-track{
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    background-color: gray;
+    border-radius: 10px;
+    /* border-left: 9px solid white;
+    border-right: 9px solid white; */
+}
+
+#ratioTable_sideBar_overlay::-webkit-scrollbar-thumb{
+    background-color: rgb(228, 214, 241);
+    /* outline: 1px solid rgb(228, 214, 241); */
+    border-radius: 10px;
+    border: 0.2vw solid gray;
+    
+    /* border-left: 8px solid white;
+    border-right: 7px solid white; */
+}
+
+#ratioTable_sideBar_overlay::-webkit-scrollbar-corner{
+    background-color: darkgray;
+}

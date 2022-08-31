@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 // import { Link } from "react-router-dom";
 import { Link, useNavigate } from "react-router-dom";
 import login_api from "./components/api/login_api"
-import useAccess from "../accessToken"
+import useAccess from "../auths/accessToken"
 // import useRefresh from "../refreshToken"
 import './Login.css'
 
@@ -23,16 +23,14 @@ function Login() {
 
   const success = async (text)=> {
     console.log("You are logged in!");
-    // await localStorage.setItem("refreshToken", text.refresh);
-
+    await localStorage.setItem("refreshToken", text.refresh);
     setAccess(
-      {
-        access:text.access,
-      }
+      // {
+        text.access,
+      // }
     )
     navigate("/ledger");
   };
-  console.log(access) 
 
   const formSubmit = (e) => {
     e.preventDefault();
@@ -44,17 +42,22 @@ function Login() {
         
     <section>
       <div id="loginOverlay">
-        <div id="regTitle">
-          <h1>Registration</h1>
+        <div id="loginTitle">
+          <h1>Login</h1>
         </div>
 
         <div id="loginForm_overlay">
           <form id="loginForm" onSubmit={formSubmit}>
-              E-mail<br/>
-              <input className="input_form" autoFocus type="text" id="email" placeholder="my_mail@mail.com" onChange={(e)=>{setEmail(e.target.value)}} value={email} /><br/><br/><br/>
-
-              Password<br/>
-              <input className="input_form" type="password" id="password" placeholder="************" onChange={(e)=>{setPassword(e.target.value)}} value={password} /><br/><br/>
+              <div className="inputTextOverlay">
+                E-mail<br/>
+                <input className="input_form" autoFocus type="text" id="email" placeholder="my_mail@mail.com" onChange={(e)=>{setEmail(e.target.value)}} value={email} /><br/><br/><br/>
+              </div>
+              
+              <div className="inputTextOverlay">
+                Password<br/>
+                <input className="input_form" type="password" id="password" placeholder="************" onChange={(e)=>{setPassword(e.target.value)}} value={password} /><br/><br/>
+              </div>
+              
               
               <div style={{margin: "1em", color: "red"}}>{message}</div>
 

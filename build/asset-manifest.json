@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/static/css/main.0a80dc99.css",
+    "main.js": "/static/js/main.26f73290.js",
+    "static/js/787.7f80f335.chunk.js": "/static/js/787.7f80f335.chunk.js",
+    "static/media/moneytree.png": "/static/media/moneytree.30ebb3537ab005180746.png",
+    "index.html": "/index.html",
+    "main.0a80dc99.css.map": "/static/css/main.0a80dc99.css.map",
+    "main.26f73290.js.map": "/static/js/main.26f73290.js.map",
+    "787.7f80f335.chunk.js.map": "/static/js/787.7f80f335.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.0a80dc99.css",
+    "static/js/main.26f73290.js"
+  ]
+}

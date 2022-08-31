@@ -1,0 +1,120 @@
+#row{
+    display: flex;
+    flex-direction: row;
+}
+
+#column{
+    display: flex;
+    flex-direction: column;
+}
+
+.leftNav_selected{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 16px;
+    padding-top: 1vh;
+    padding-bottom: 1vh;
+    padding-left: 0.7vw;
+    padding-right: 0.7vw;
+    margin-bottom: 1vh;
+}
+
+.leftNav_selected:hover{
+    background-color: var(--color5);
+    color: var(--color1);
+}
+
+#leftSpan{
+    background-Color: var(--color1);
+    width: 15%;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    font-size: 0.85vw;
+    font-weight: bold;
+}
+
+#leftSpan_Overlay{
+    margin-top: 10vh;
+} 
+
+#leftSpan div div p{
+    margin-top: 0.6vh;
+}
+
+#leftNav_home{
+    background-image: url(../../icons/home.png);
+    background-repeat: no-repeat;
+    background-origin: content-box;
+    background-position: center center;
+    background-size: auto;
+
+    -moz-background-size: cover;
+    -ms-background-size: cover;
+    -o-background-size: cover;
+     background-size: cover;
+    width: 3.4vw;
+    height: 5vh;
+    display: flex;
+    justify-content: center;
+}
+
+#leftNav_cashbook{
+    background-image: url(../../icons/cashbook.png);
+    background-repeat: no-repeat;
+    background-origin: content-box;
+    background-position: center center;
+    background-size: auto;
+
+    -moz-background-size: cover;
+    -ms-background-size: cover;
+    -o-background-size: cover;
+     background-size: cover;
+    width: 3.4vw;
+    height: 5vh;
+    /* border: 2px solid black; */
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+}
+
+#leftNav_enventory{
+    background-image: url(../../icons/eventory.png);
+    background-repeat: no-repeat;
+    background-origin: content-box;
+    background-position: center center;
+    background-size: auto;
+
+    -moz-background-size: cover;
+    -ms-background-size: cover;
+    -o-background-size: cover;
+     background-size: cover;
+    width: 3.4vw;
+    height: 5vh;
+    /* border: 2px solid black; */
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+}
+
+#leftNav_keepsafe{
+    background-image: url(../../icons/keepsafe.png);
+    background-repeat: no-repeat;
+    background-origin: content-box;
+    background-position: center center;
+    background-size: auto;
+
+    -moz-background-size: cover;
+    -ms-background-size: cover;
+    -o-background-size: cover;
+     background-size: cover;
+    width: 3.4vw;
+    height: 5vh;
+    /* border: 2px solid black; */
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+}

@@ -1,5 +1,5 @@
 import {createContext, useContext, useState} from 'react'
-import ReactDOM from "react-dom/client";
+// import ReactDOM from "react-dom/client";
 
 export const AccessContext = createContext(null)
 const useAccess = () => useContext(AccessContext)

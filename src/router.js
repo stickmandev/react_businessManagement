@@ -7,16 +7,37 @@ import LandingPage from "./features/landingPage/landingPage";
 import Registration from "./features/register/Register";
 import Login from "./features/login/Login";
 import Ledger from "./features/ledger/Ledger"
+import ServiceNotAvailable from "./features/ledger/ServiceNotAvailable"
+import UserVerification from "./features/register/components/UserVerification";
+import Filtter from "./features/ledger/components/filtter";
+import Ratios from "./features/ledger/components/ratios";
+import Profit from "./features/ledger/components/ratios/profit";
+import ProfitMargin from "./features/ledger/components/ratios/profitMargin";
+import Markup from "./features/ledger/components/ratios/markup";
+import NetProfit from "./features/ledger/components/ratios/netProfit";
+import FreeCashFlow from "./features/ledger/components/ratios/freeCashFlow";
+import OwnersEquity from "./features/ledger/components/ratios/ownersEquity";
+
 const Router = () => {
     return (
         <>
-            <BrowserRouter>
+            <BrowserRouter >
                 <HeaderLayout />     
-                    <Routes>
+                    <Routes  >
                         <Route path='/' exact element={<LandingPage />} />
                         <Route path='/registration' exact element={<Registration />} />
-                        <Route path='/login' exact element={<Login />} />
-                        <Route path='/ledger' exact element={<Ledger />} />
+                        <Route path='/registration/verify/' exact element={<UserVerification />} />
+                        <Route path='/login/' exact element={<Login />} />
+                        <Route path='/ledger/' exact element={<Ledger />} />
+                        <Route path='/ledger/NotAvailableYet' exact element={<ServiceNotAvailable />} />
+                        <Route path='/ledger/filtter' exact element={<Filtter />} />
+                        <Route path='/ledger/ratios/' exact element={<Ratios />} />
+                        <Route path='/ledger/ratios/profit' exact element={<Profit />} />
+                        <Route path='/ledger/ratios/profitmargin' exact element={<ProfitMargin />} />
+                        <Route path='/ledger/ratios/markup' exact element={<Markup />} />
+                        <Route path='/ledger/ratios/netprofit' exact element={<NetProfit />} />
+                        <Route path='/ledger/ratios/freecashflow' exact element={<FreeCashFlow />} />
+                        <Route path='/ledger/ratios/ownersequity' exact element={<OwnersEquity />} />
                     </Routes>
                 <FooterLayout />      
             </BrowserRouter>

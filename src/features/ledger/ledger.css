@@ -1,0 +1,569 @@
+/* section{
+    background-color: greenyellow;
+} */
+
+.overlay{
+    width: 100%;
+}
+
+/* #ledgerSection{
+    
+} */
+
+#row1_scroll_overlay {
+    height: 75.5vh;
+    height: 75.5vh;
+    background-color: var(--color1);
+    border-left: 3px solid var(--color4); 
+    display: flex;
+    /* position: relative; */
+    /* flex-direction: column   ; */
+	/* align-items: center; */
+    width: 100%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    /* direction: ltr; */
+    direction: rtl;
+}
+
+#row1_scroll_overlay::-webkit-scrollbar{
+    height: 1vw;
+    /* width: 0.8vw; */
+    width: 0.4vw;
+}
+
+/* #row1_scroll_overlay::-webkit-scrollbar-track{
+    box-shadow: inset 0px 0px 6px rgba(0, 0, 0, 0.3);
+    background-color: rgb(223, 217, 217);
+} */
+
+#row1_scroll_overlay::-webkit-scrollbar-thumb{
+    background-color: var(--color5);
+    border-radius: 10px;
+}
+
+#row1_scroll_overlay::-webkit-scrollbar-corner{
+    background-color: darkgray;
+}
+
+#row1 {
+    /* width: 50%; */
+    height: 92vh;
+    background-color: var(--color1);
+    border-left: 3px solid var(--color1); 
+    border-right: 3px solid var(--color4); 
+    /* border-right: 3px solid var(--color4);  */
+    display: flex;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+	align-items: center;
+    width: 100%;
+    /* overflow: scroll; */
+    direction: ltr;
+}
+/* #row2 {
+    width: 100%;
+    height: 13vh;
+    background-color: var(--color2);
+}  */
+
+#big_table_overlay{
+    overflow: hidden;
+    border-top-left-radius: 39px;
+    border-top-right-radius: 39px;
+    padding: 0;
+    /* margin-top: 6vh; */
+    margin-top: 2.8vw;
+}
+
+#table_overlay{
+    border: 2px solid black;
+    border-top-left-radius: 39px;
+    border-top-right-radius: 39px;
+    border-spacing: 0;
+    overflow: hidden;
+    width: 61.1vw;
+    /* height: 50.95vh; */
+    height: 23.99vw;
+    /* margin: -0.62px; */
+}
+
+#table-ledger { 
+    margin: 0px;   
+    /* background-color: red; */
+    /* border: 10px solid ; */
+    /* padding-bottom: ; */
+}
+
+#thead{
+    position: sticky;
+    top: 0;
+    /* height: 14.5vh; */
+    /* height: 7.25vw; */
+    /* height: 6.8vw; */
+    overflow-y: scroll;
+    overflow-y: overlay;
+    overflow-x: scroll;
+    overflow-x: overlay;
+    
+}
+
+#thead::-webkit-scrollbar {
+    width: 0;  /* Remove scrollbar space */
+    background: transparent;  /* Optional: just make scrollbar invisible */
+}
+
+/* #stream{
+    min-height: 3.1vw;
+    background-color: green;
+    border: 2px solid red;
+} */
+
+#tbody{
+    /* overflow: auto; */
+    /* height: 36.5vh; */
+    height: 16.6vw;
+    overflow-y: scroll;
+    overflow-y: overlay;
+    overflow-x: scroll;
+    
+    display: flex;
+    flex-direction: column;
+    flex-direction: column-reverse;
+    
+    /* transform:rotateX(180deg); */
+    /* -moz-transform:rotateX(180deg); Mozilla */
+    /* -webkit-transform:rotateX(180deg); Safari and Chrome */
+    /* -ms-transform:rotateX(180deg); IE 9+ */
+    /* -o-transform:rotateX(180deg); */
+    /* overflow: overlay; */
+}
+
+
+#tbody::-webkit-scrollbar{
+    height: 1vw;
+    width: 1vw;
+}
+
+#tbody::-webkit-scrollbar-track{
+    box-shadow: inset 0px 0px 6px rgba(0, 0, 0, 0.3);
+    background-color: rgb(223, 217, 217);
+    /* outline: 1px solid rgb(223, 217, 217); */
+    /* border-left: 2px solid black; */
+}
+
+#tbody::-webkit-scrollbar-thumb{
+    background-color: var(--color4);
+    /* outline: 1px solid rgb(223, 217, 217); */
+    border-radius: 10px;
+    border: 0.2vw solid rgb(223, 217, 217);
+    /* border-left: 2px solid black; */
+
+}
+
+#tbody::-webkit-scrollbar-corner{
+    background-color: darkgray;
+}
+
+#dummybar{
+    width: 77.5vw;
+    height: 100%;
+    background-color: red;
+    z-index: 100;
+}
+
+.th{
+    display: flex;
+    background-color: var(--color4);
+    align-items: center;
+    justify-content: center;
+    border: 1px solid black;
+    padding-left: 5px;
+    padding-right: 5px;
+    font-size: 0.9vw;
+    font-size: 1vw;
+    font-weight: bolder;
+    color: var(--color1);
+    /* height: 4.1vw; */
+}
+.th_stream{
+    /* height: 8vh; */
+    /* height: 3.65vw; */
+    height: 4vw;
+
+}
+.tr{
+    display: flex;
+    flex-direction: row;
+}
+
+#period{
+    font-size: 1.6vw;
+}
+
+#period div:first-child span{
+    font-size: 0.8vw;
+    margin-right: 0.3vw;
+}
+
+#period div:first-child input{
+    /* font-size: 0.8vw; */
+    border: 1px solid var(--color1);
+    background-color: var(--color4);
+    margin-right: 2.5vw;
+    width: 8vw;
+    color: var(--color1);
+    padding-left: 8px;
+    height: 2vw;
+    font-size: 0.78vw;
+}
+
+#period div:last-child span{
+    font-size: 0.8vw;
+    margin-right: 0.3vw;
+}
+
+#period div:last-child input{
+    /* font-size: 0.8vw; */
+    border: 1px solid var(--color1);
+    background-color: var(--color4);
+    margin-right: 0vw;
+    width: 8vw;
+    color: var(--color1);
+    padding-left: 8px;
+    height: 2vw;
+    font-size: 0.78vw;
+}
+
+.stream{
+    font-size: 1.6vw;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+#trSecondRow{
+    height: 100%;
+}
+
+#addTr{
+    /* height: 6.2vh; */
+    height: 3.1vw;
+    display: flex;
+    flex-direction: row;
+    position: sticky;
+    bottom: 0;
+    background-color: var(--color1);
+    z-index: 1;
+}
+
+.td{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    /* min-height: 6.2vh; */
+    min-height: 3.1vw;
+    border: 1px solid black;
+    padding-left: 5px;
+    padding-right: 5px;
+    word-wrap: break-word; 
+    overflow-wrap: break-word;
+    /* hyphens: auto;  */
+    font-size: 0.9vw;
+    background-color: var(--color1);
+}
+
+.discriptionTd{
+    justify-content: left;
+}
+
+.discriptionTd  button{
+    margin-left: 30px;
+    font-size: 1vw;
+    background-color: var(--color1);
+    border: 0px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 2px solid white;
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+    height: 100%;
+}
+
+.discriptionTd  button:hover{
+    background-color: rgb(235, 196, 196);
+    border: 2px solid black;
+}
+
+.discriptionTd  button:active{
+    background-color: red;
+    border: 2px solid black;
+}
+
+.discriptionTd  button span{
+    /* background-color: red; */
+    width: 1.4vw;
+    /* height: 2.7vh; */
+    height: 1.35vw;
+    margin-right: 0.3vw;
+
+    background-image: url(../../icons/add_circle.png);
+    background-repeat: no-repeat;
+    background-origin: content-box;
+    background-position: center center;
+    background-size: auto;
+
+    -moz-background-size: cover;
+    -ms-background-size: cover;
+    -o-background-size: cover;
+     background-size: cover;
+
+     /* -webkit-filter : hue-rotate(180deg); */
+    /* filter : hue-rotate(180deg); */
+    /* filter: invert(100%); */
+    /* filter: saturate(3); */
+    /* filter: grayscale(100%); */
+}
+
+#EditDeleteOverlay{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 3vw;
+    /* height: 6.5vh; */
+    height: 3.25vw;
+    position: absolute;
+    margin-left: 60vw;
+    padding-left: 2vw;
+    z-index: 50  ;
+    /* background-color: blue; */
+}
+
+#EditDeleteOverlay button{
+    background-color: white;
+    border: 1px solid white;
+    
+    width: 1.3vw;
+    /* height: 6vw; */
+    border-radius: 7px;
+}
+
+#EditDeleteOverlay button:hover{
+    background-color: gray;
+}
+
+#EditDeleteOverlay button:active{
+    background-color: var(--baground1);
+    color: white;
+}
+
+#EditDeleteOverlay button:first-child{
+    background-image: url(../../icons/closeSquare_dark.png);
+    background-repeat: no-repeat;
+    background-origin: content-box;
+    background-position: center center;
+    background-size: auto;
+
+    -moz-background-size: cover;
+    -ms-background-size: cover;
+    -o-background-size: cover;
+     background-size: cover;
+}
+#EditDeleteOverlay button:first-child:hover{
+    background-color: white;
+    background-image: url(../../icons/closeSquare_hover.png);
+    background-repeat: no-repeat;
+    background-origin: content-box;
+    background-position: center center;
+    background-size: auto;
+
+    -moz-background-size: cover;
+    -ms-background-size: cover;
+    -o-background-size: cover;
+     background-size: cover;
+}
+
+#EditDeleteOverlay button:last-child{
+    background-color: white;
+    background-image: url(../../icons/edit_btn.png);
+    background-repeat: no-repeat;
+    background-origin: content-box;
+    background-position: center center;
+    background-size: auto;
+
+    -moz-background-size: cover;
+    -ms-background-size: cover;
+    -o-background-size: cover;
+     background-size: cover;
+}
+
+#EditDeleteOverlay button:last-child:hover{
+    background-color: white;
+    background-color: white;
+    background-image: url(../../icons/edit_btn_hover.png);
+    background-repeat: no-repeat;
+    background-origin: content-box;
+    background-position: center center;
+    background-size: auto;
+
+    -moz-background-size: cover;
+    -ms-background-size: cover;
+    -o-background-size: cover;
+     background-size: cover;
+}
+
+
+.streamHeader{
+    display: flex;
+    /* height: 100%; */
+    height: 3.1vw;
+}
+
+#totals{
+    /* margin-top: 3vh; */
+    margin-top: 1.3vw;
+    /* border: 2px solid red; */
+    /* background-color: blueviolet; */
+    /* width: 62%; */
+    /* width: 85%; */
+    /* width: 84.9%; */
+    width: calc(84.9% - 2px);
+    /* width:  61vw; */
+    display: flex;
+    /* flex-direction: ; */
+    align-items: flex-end;
+    /* margin-left: 1vw; */
+    /* overflow-x: scroll; */
+    overflow-x: hidden;
+    flex-direction: column;
+}
+
+#balances_overlay{
+    /* border: 2px solid orange; */
+    display: flex;
+    /* width: 51%; */
+    /* margin-left: 3vw; */
+    /* margin-left: 1vw; */
+    /* overflow: hidden; */
+    /* overflow: scroll; */
+    /* overflow-x: scroll; */
+    overflow: hidden;
+    width: 100%;
+    flex-direction: row;
+    border-right: 2px solid black;
+    height: 7.4vw;
+}
+
+/* #totalBalance1{
+    border-right: 2px solid green;
+    width: 90%;
+}
+
+#totalBalance2{
+    border-right: 2px solid green;
+    width: 50%;
+} */
+
+
+#total_balance_dummyBlock{
+    background-color: white;
+    /* background-color: greenyellow; */
+    border: 0px solid black;
+    border-right: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    height: 7.4vw;
+}
+
+#total_balance_dummyBlock p{
+    /* margin-top: 2vh; */
+    margin-top: 1vw;
+    /* margin-bottom: 2vh; */
+    margin-bottom: 1vw;
+    margin-right: 1.6vw;
+    font-size: 1vw;
+    /* color: var(--color1); */
+}
+
+#balances_overlay::-webkit-scrollbar {
+    width: 0;  /* Remove scrollbar space */
+    background: transparent;  /* Optional: just make scrollbar invisible */
+}
+
+#grand_Total_overlay{
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    /* background-color: brown; */
+    margin-bottom: 1vw;
+}
+
+#grand_Total_overlay p{
+    margin-top: 2vh;
+    margin-top: 1vw;
+    margin-bottom: 2vh;
+    margin-bottom: 1vw;
+    margin-right: 1.6vw;
+    font-size: 1vw; 
+}
+
+
+#grand_Total{
+    background-color: green;
+    width: 51.18%;
+    /* height: 7vh; */
+    height: 3.5vw;
+    /* margin-top: 3vh; */
+    margin-top: 1.5vw;
+    border-radius: 20px;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;   
+}
+
+#grandTotal_text{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;    
+    color: white;
+}
+
+
+
+
+
+@media screen and (max-width: 601px){
+    #name a{
+        font-size: 2.5vw;
+    }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+
+}
+
+@media screen and (min-width: 1750px){
+
+}

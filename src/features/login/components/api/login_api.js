@@ -1,6 +1,8 @@
+import {backendURL} from "../../../../backendURL"
+
 const login_api = async (email, password, success, fail) => {
   const response = await fetch(
-        `http://127.0.0.1:8000/api/token/`,
+        `${backendURL}/user/login/`,
         {
             method: 'POST',
             headers: {
@@ -10,12 +12,15 @@ const login_api = async (email, password, success, fail) => {
             body: JSON.stringify({
               "email": email,
               "password": password,
-            })
+            }),
+            cache: 'default', // *default, no-cache, reload, force-cache, only-
+            // credentials: "same-origin"
+            credentials: "include"
         }
     );
   const text = await response.text();
   if (response.status === 200) {
-    console.log("success", JSON.parse(text));
+    // console.log("success", JSON.parse(text));
     success(JSON.parse(text));
   } else {
     console.log("failed", text);
