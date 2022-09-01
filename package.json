@@ -1,6 +1,7 @@
 {
   "name": "businessmanagement",
   "version": "0.1.0",
+  "homepage": "https://gitname.github.io/businessmanagement-gh-pages",
   "private": true,
   "dependencies": {
     "@reduxjs/toolkit": "^1.8.2",
