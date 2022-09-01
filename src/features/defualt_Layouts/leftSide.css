@@ -1,13 +1,10 @@
 .active{
-    /* background-color: red; */
+    background-color: red ; 
 }
 
 .active p{
-    color: red;
-}
-
-.leftactive{
-    background-color: red;
+    /* background-color: red; */
+    color: red ;
 }
 
 #row{
@@ -34,6 +31,7 @@
     padding-right: 0.7vw;
     margin-bottom: 0.5vw;
 }
+
 
 .leftNav_selected:hover{
     background-color: var(--color5);

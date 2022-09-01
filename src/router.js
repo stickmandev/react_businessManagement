@@ -17,6 +17,9 @@ import Markup from "./features/ledger/components/ratios/markup";
 import NetProfit from "./features/ledger/components/ratios/netProfit";
 import FreeCashFlow from "./features/ledger/components/ratios/freeCashFlow";
 import OwnersEquity from "./features/ledger/components/ratios/ownersEquity";
+import Enventory from "./features/enventory/Enventory";
+import KeepSafe from "./features/keepSafe/KeepSafe";
+import Home from "./features/home/Home";
 
 const Router = () => {
     return (
@@ -24,12 +27,13 @@ const Router = () => {
             <BrowserRouter >
                 <HeaderLayout />     
                     <Routes  >
-                        <Route path='/' exact element={<LandingPage />} />
+                        {/* <Route path='/' exact element={<LandingPage />} /> */}
                         <Route path='/registration' exact element={<Registration />} />
                         <Route path='/registration/verify/' exact element={<UserVerification />} />
-                        <Route path='/login/' exact element={<Login />} />
+                        <Route path='/' exact element={<Login />} />
+                        {/* <Route path='/login/' exact element={<Login />} /> */}
+
                         <Route path='/ledger/' exact element={<Ledger />} />
-                        <Route path='/ledger/NotAvailableYet' exact element={<ServiceNotAvailable />} />
                         <Route path='/ledger/filtter' exact element={<Filtter />} />
                         <Route path='/ledger/ratios/' exact element={<Ratios />} />
                         <Route path='/ledger/ratios/profit' exact element={<Profit />} />
@@ -38,6 +42,16 @@ const Router = () => {
                         <Route path='/ledger/ratios/netprofit' exact element={<NetProfit />} />
                         <Route path='/ledger/ratios/freecashflow' exact element={<FreeCashFlow />} />
                         <Route path='/ledger/ratios/ownersequity' exact element={<OwnersEquity />} />
+
+                        <Route path='/ledger/NotAvailableYet/RecurringRecord' exact element={<ServiceNotAvailable />} />
+                        <Route path='/ledger/NotAvailableYet/convert_to_pdf' exact element={<ServiceNotAvailable />} />
+                        <Route path='/ledger/NotAvailableYet/Graphs' exact element={<ServiceNotAvailable />} />
+                        <Route path='/ledger/NotAvailableYet/Settings' exact element={<ServiceNotAvailable />} />
+
+
+                        <Route path='/enventory' exact element={<Enventory />} />
+                        <Route path='/keepSafe' exact element={<KeepSafe />} />
+                        <Route path='/home' exact element={<Home />} />
                     </Routes>
                 <FooterLayout />      
             </BrowserRouter>
