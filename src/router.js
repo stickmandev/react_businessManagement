@@ -31,7 +31,7 @@ const Router = () => {
                         <Route path='/registration' exact element={<Registration />} />
                         <Route path='/registration/verify/' exact element={<UserVerification />} />
                         <Route path='/' exact element={<Login />} />
-                        {/* <Route path='/login/' exact element={<Login />} /> */}
+                        <Route path='/login/' exact element={<Login />} />
 
                         <Route path='/ledger/' exact element={<Ledger />} />
                         <Route path='/ledger/filtter' exact element={<Filtter />} />
