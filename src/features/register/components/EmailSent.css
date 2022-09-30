@@ -1,0 +1,69 @@
+#emailSent{
+  /* width: 100%; */
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 7vw;
+
+  /* border: 2px solid red; */
+}
+
+#emailSentPic{
+  margin-bottom: 1vw;
+
+  width: 22vw;
+  height: 13vw;
+  /* margin-right: 0.3vw; */
+
+  background-image: url(../../../icons/mail.png);
+  background-repeat: no-repeat;
+  background-origin: content-box;
+  background-position: center center;
+  background-size: auto;
+
+  -moz-background-size: cover;
+  -ms-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+#emailSent p{
+  font-size: 1vw;
+  font-weight: bold;
+}
+
+#emailSent button{
+  margin-top: 3vw;
+  font-size: 1vw;
+  font-weight: bold;
+  width: 10vw;
+  color: var(--color1);
+  background-color: var(--color5);
+}
+
+#emailSent button:hover{
+  color: var(--color5);
+  background-color: var(--color1);
+}
+
+@media screen and (max-width: 601px){
+  #emailSentPic{
+    margin-bottom: 1vw;
+    width: 52vw;
+    height: 31vw;
+  }
+  
+  #emailSent p{
+    font-size: 0.8em;
+  }
+  
+  #emailSent button{
+    margin-top: 10vw;
+    font-size: 0.8em;
+    width: 30vw;
+    color: var(--color1);
+    background-color: var(--color5);
+  }
+}

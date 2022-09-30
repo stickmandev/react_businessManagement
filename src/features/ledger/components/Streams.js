@@ -27,13 +27,6 @@ function Streams() {
   const [dateFrom, setDateFrom] = useState("");
   const [dateTo, setDateTo] = useState("");
 
-  const streamWidth = 14.4
-  const periodWidth = 28
-  const flowWidth = streamWidth/2
-  const snWidth = periodWidth*(0.1)
-  const dateWidth = periodWidth*(0.2)
-  const descriptionWidth = periodWidth*(0.7)
-  const table_width = (stream.length*streamWidth) + periodWidth
   
   Ledger(stream.length)
     // CashStream data management----------------------------------------------------------------------------------------------------
@@ -93,9 +86,9 @@ function Streams() {
           <div > 
             <div className="th stream th_stream" >{item.name}</div>
             
-            <div className='streamHeader' style={{height:"3.3vw"}}>
-              <div className="th" style={{width:`${flowWidth}vw`}}>Credit($)</div>
-              <div className="th" style={{width:`${flowWidth}vw`}}>Debit($)</div>
+            <div className='streamHeader'>
+              <div className="th " >Credit($)</div>
+              <div className="th" >Debit($)</div>
             </div>
           </div>
         )
@@ -152,9 +145,9 @@ function Streams() {
     return (
       <ScrollSyncPane>
       <div id="thead"  >
-        <div className="tr" style={{ width:`${table_width}vw`}}>
-            <div style={{ position: 'sticky', left: `${0}`, width:`${31.5}vw`}}>
-              <div className="th" id="period" style={{height:"4vw"}}>
+        <div className="tr" style={{ width:`calc((${stream.length} * var(--streamWidth)) + var(--periodWidth))`}}>
+            <div style={{ position: 'sticky', left: `${0}`}}>
+              <div className="th stream th_stream" id="period">
                 <div>
                   <strong><span>From:</span></strong>
                   <input type="date" id="filterDateFrom" name="filterDateFrom" value ={dateFrom} onChange={changeDateFrom}/>
@@ -165,10 +158,10 @@ function Streams() {
                   <input type="date" id="filterDateTo" name="filterDateTo" value={dateTo} onChange={changeDateTo}/>
                 </div>
               </div>
-              <div className="tr" id="trSecondRow" style={{height:"3.3vw"}}>
-                <div  className="th" id="snHeader" style={{width:`${snWidth}vw`}}>S/N</div>
-                <div  className="th" id="dateHeader" style={{width:`${dateWidth}vw`}}>Date</div>
-                <div   className="th" id="descriptionHeader" style={{width:`${descriptionWidth}vw`}}>Description</div>
+              <div className="tr" id="trSecondRow">
+                <div  className="th ledgerSn desktop" id="snHeader" >S/N</div>
+                <div  className="th ledgerDates" id="dateHeader" >Date</div>
+                <div   className="th discriptionTd" id="descriptionHeader" >Description</div>
               </div>
             </div>
              

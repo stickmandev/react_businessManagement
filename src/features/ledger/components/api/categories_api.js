@@ -8,7 +8,7 @@ export const get_categories = async ( success, fail, access, set_access) => {
     if (status  === 200){
       // fetching cashflow data
       const response = await fetch(
-        `${backendURL}/ledger/category/`,
+        `${backendURL}/backend_Ledger/category/`,
         {
             method: 'GET',
             headers: {
@@ -47,7 +47,7 @@ export const create_categories = async (newCategory, success, access, set_access
     if (status  === 200){
       // creating cashflow data
       const response = await fetch(
-        `${backendURL}/ledger/category/`,
+        `${backendURL}/backend_Ledger/category/`,
         {
           method: 'POST',
           headers: {
@@ -87,7 +87,7 @@ export const create_categories = async (newCategory, success, access, set_access
 //     if (status  === 200){
 //       // fetching cashflow data
 //       const response = await fetch(
-//         `${backendURL}/ledger/cashflow/${flowId}/delete/`,
+//         `${backendURL}/backend_Ledger/cashflow/${flowId}/delete/`,
 //         {
 //             method: 'DELETE',
 //             headers: {

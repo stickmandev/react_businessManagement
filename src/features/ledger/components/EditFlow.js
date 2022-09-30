@@ -48,10 +48,10 @@ function EditFlow(prop) {
 
                     for( var i =0; i < streamBTNs.length; i++){
                         streamBTNs[i].style.backgroundColor = 'white'
-                        streamBTNs[i].style.color = 'rgb(142, 143, 196)'
+                        streamBTNs[i].style.color = 'var(--color5)'
                     }
 
-                    e.target.style.backgroundColor = 'rgb(142, 143, 196)'
+                    e.target.style.backgroundColor = 'var(--color5)'
                     e.target.style.color = 'white'
                 }}>
                     {item.name}

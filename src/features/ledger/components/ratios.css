@@ -1,36 +1,49 @@
-
-
-#ratioOverlaay{
-      /* width: 50%; */
-      height: 76vh;
-      background-color: var(--color1);
-      border-left: 3px solid var(--color4); 
-      border-right: 3px solid var(--color4); 
-      /* display: flex; */
-      /* position: relative; */
-      /* display: flex; */
-      /* flex-direction: column; */
-      /* align-items: center; */
-      width: 100%;
+#ratioOverlay{
+    background-color: var(--color1);
+    border-left: 3px solid var(--color7); 
+    border-right: 3px solid var(--color7); 
+    width: 100%;
+    height: calc(100vh - 12.35vw);
+    overflow-y: scroll;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    direction: rtl;
 }
 
+#ratioOverlay::-webkit-scrollbar{
+    height: 1vw;
+    /* width: 0.8vw; */
+    width: 0.4vw;
+}
+
+#ratioOverlay::-webkit-scrollbar-thumb{
+    background-color: var(--color8);
+    border-radius: 10px;
+}
+
+#ratioOverlay::-webkit-scrollbar-corner{
+    background-color: darkgray;
+}
+
+/* ..................................................................................................... */
 #ratioHomeform{
     display: flex;
     flex-direction: column;
-    /* border: 2px solid black; */
     width: 100%;
-    margin-top: 3vh;
+    padding-top: 1.5vw;
+    background-color: var(--color1);
+    direction: ltr;
 }
 
 #ratioHomeform .reverseDiv{
-    /* border: 2px solid red;     */
     display: flex;
-    flex-direction: row-reverse;
-    margin-bottom: 2vh;
+    justify-content: flex-end;
+    flex-direction: row;
+    margin-bottom: 1vw;
 }
 
 #ratioHomeform .reverseDiv div{
-    /* border: 2px solid greenyellow; */
     width: 61.2%; 
     display: flex;   
     align-items: center;
@@ -38,16 +51,16 @@
 
 #ratioHomeform .reverseDiv div input{
     padding-left: 0.4vw;
-    padding-right: 0.4vw;
+    padding-right: 0.4vw; 
 }
 
 #ratioHomeform .reverseDiv div select{
     width: 5vw;
-    height: 4.3vh;
+    height: 2.15vw;
     border-radius: 7px;
-    /* background-color: rgb(121, 121, 245); */
     font-size: 0.7vw;
     background-color: white;
+    border: 2px solid var(--color7);
 }
 
 #ratioHomeform .reverseDiv div option{
@@ -55,132 +68,336 @@
     
 }
 
-
 #ratioHomeform .reverseDiv p{
     margin-right: 0.3vw;
 }
 
 #filterDateFrom{
     width: 11vw;
-    height: 4vh;
+    height: 2vw;
     margin-right: 1.9vw;
 }
 
 #filterDateTo{
     width: 11vw;
-    height: 4vh;
+    height: 2vw;
     margin-right: 1.9vw;
 }
 
 #all_ratios_overlay{
-    /* border: 2px solid rgb(255, 0, 0); */
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    height: 60vh;
-}
-
-.all_ratios{
-    /* border: 2px solid pink; */
-    display: flex;
+    flex-wrap: wrap;
     flex-direction: row;
-    width: 80%;
     justify-content: space-between;
-    /* margin-bottom: 8vh; */
+    width: 80%;
+    width: 57.1vw;
+    direction: ltr;
 }
 
-.each_Ratio{
-    width: 16vw;
-    height: 27vh;
-    background-color: greenyellow;
-    /* border: 2px solid black; */
+.each_Ratio_BigOverlay{
+    width: 57.1vw;
+    height: 14vw;
     border-bottom-left-radius: 21px;
     border-top-left-radius: 21px;
     border-top-right-radius: 21px;
     color: var(--color1);
+    margin-bottom: 4vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
-.each_Ratio div{
-    padding-left: 1.2vw;
-    padding-right: 1vw;
+.each_Ratio_BigOverlay div:first-child{
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
 }
 
-.each_Ratio div:first-child{
-    padding-top: 2vh;
-    padding-bottom: 1vh;
+.each_Ratio_BigOverlay div:first-child h3{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 1vw;
 }
 
-.each_Ratio div:last-child{
+.each_Ratio_BigOverlay div:first-child  h3 .h3_normal{
+    font-size: 1.6vw;
+    margin-top: 2vw;
+}
+
+.each_Ratio_BigOverlay div:first-child h3 .h3_percentage{
+    font-size: 5vw;
+}
+
+.each_Ratio_BigOverlay div:last-child{
+    display: flex;
+
+}
+
+.each_Ratio_BigOverlay div:last-child p{
+    margin-left: 4vw;
+    margin-right: 4vw;
+    font-size: 1vw;
+}
+
+/* ........................................................................................... */
+.each_Ratio_SmallOverlay{
+    width: 16vw;
+    height: 14vw;
+    border-bottom-left-radius: 21px;
+    border-top-left-radius: 21px;
+    border-top-right-radius: 21px;
+    color: var(--color1);
+    margin-bottom: 4vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.each_Ratio_SmallOverlay_titile{
+    width: 80%;
+    font-weight: bold;
+    font-size: 1vw;
+}
+
+.each_Ratio_SmallOverlay_details{
+    width: 80%;
+}
+
+.each_Ratio_SmallOverlay_details div:first-child{
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.each_Ratio div:last-child h1{
+.each_Ratio_SmallOverlay_details div:first-child h1{
     font-size: 5vw;
-    margin-left: 2.3vw;
+    margin-left: 2vw;
+}
+
+.each_Ratio_SmallOverlay_details div:first-child h3{
+    font-size: 1vw;
+    margin-top: -0.5vw;
+    margin-bottom: 1vw;
+}
+
+.each_Ratio_SmallOverlay_details div:first-child p{
+    font-size: 1vw;
+    margin-bottom: 0.4vw;
 }
 
 .sub{
-    font-size: 2.3vw;
-}
-
-.each_Ratio div:last-child h3{
-    margin-top: -1vh;
-    margin-bottom: 2.5vh;
-}
-
-.each_Ratio div:last-child p{
-    margin-top: 0.2vh;
-    font-size: 0.8vw;
+    font-size: 2vw;
 }
 
 #ratio_home_profit{
-    /* margin-top: 1vh; */
-    background-color: green; 
-    /* border: 4px solid black; */
-}
-
-#ratio_home_profit div:first-child h3{
-    margin-bottom: 0.3vh;
-    /* background-color: red;  */
-    /* font-size: 1.2vw; */
-    font-size: 1vw;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-
-#ratio_home_profit div:first-child span{
-    /* margin-top: 0.5vh; */
-    /* background-color: red;  */
-    font-size: 2vw;
-    /* text-decoration: underline; */
+    background-color: var(--color10); 
 }
 
 #ratio_home_profit div:last-child{
-    margin-top: 2vh;
-    /* background-color: red;  */
-}
-
-#ratio_home_ProfitMargin{
-    background-color: rgb(167, 111, 39); 
-}
-
-#ratio_home_Markup{
-    background-color: rgb(121, 121, 245);
+    margin-top: 1vw;
 }
 
 #ratio_home_NetProfit{
-    background-color: rgb(44, 12, 73);
+    background-color: var(--color5);
 }
 
 #ratio_home_FreeCashFlow{
-    background-color: orange;
+    background-color: var(--color12);
 }
 
 #ratio_home_OwnersEquity{
-    background-color: rgb(150, 84, 212);
+    background-color: var(--color6);
+}
+
+@media screen and (max-width: 601px){
+    #ratioOverlay{
+        border-left: 0px solid var(--color7); 
+        border-right: 0px solid var(--color7);
+        height: calc(91.2vh - 12.35vw);
+    }
+
+    #ratioHomeform{
+        margin-top: 3.5vw;
+    }
+
+    #ratioHomeform .reverseDiv{
+        justify-content: center;
+        margin-bottom: 1vw;
+        /* border: 2px solid red; */
+    }
+
+    #ratioHomeform .reverseDiv div{
+        /* width: 90%; */
+        width: 87vw;
+        display: flex;   
+        align-items: center;
+        justify-content: center;
+        font-size: 0.8em;
+    }
+
+    #ratioHomeform .reverseDiv div input{
+        padding-left: 0.4vw;
+        padding-right: 0.4vw; 
+        height: 9vw;
+        width: 30%;
+        font-size: 0.8em;
+    }
+
+    #ratioHomeform .reverseDiv div select{
+        width: 16%;
+        height: 10vw;
+        border-radius: 7px;
+        font-size: 0.8em;
+        background-color: white;
+    }
+    
+    #ratioHomeform .reverseDiv div option{
+        font-size: 0.8em;
+    }
+    
+    #ratioHomeform .reverseDiv p{
+        margin-right: 0.3vw;
+    }
+    
+    #filterDateFrom{
+        width: 11vw;
+        height: 2vw;
+        margin-right: 1.9vw;
+    }
+    
+    #filterDateTo{
+        width: 11vw;
+        height: 2vw;
+        margin-right: 1.9vw;
+    }
+    
+    #all_ratios_overlay{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-top: 2vw;
+        width: 87vw;
+    }
+    
+    .each_Ratio_BigOverlay{
+        width: 87vw;
+        height: 28vw;
+        border-bottom-left-radius: 21px;
+        border-top-left-radius: 21px;
+        border-top-right-radius: 21px;
+        color: var(--color1);
+        margin-bottom: 6vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .each_Ratio_BigOverlay div:first-child{
+        display: flex;
+        justify-content: space-between;
+        width: 90%;
+        
+    }
+    
+    .each_Ratio_BigOverlay div:first-child h3{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-size: 0.9em;
+    }
+    
+    .each_Ratio_BigOverlay div:first-child  h3 .h3_normal{
+        font-size: 0.9em;
+        margin-top: 3.5vw;
+    }
+    
+    .each_Ratio_BigOverlay div:first-child h3 .h3_percentage{
+        font-size: 2em;
+        margin-bottom: 0vw;
+    }
+    
+    .each_Ratio_BigOverlay div:last-child{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        font-size: 0.86em;
+        width: 90%;
+    }
+    
+    .each_Ratio_BigOverlay div:last-child p {
+        margin-left: 0vw;
+        margin-right: 0vw;
+        margin-top: 1vw;
+        font-size: 0.8em;
+    }
+
+    .each_Ratio_BigOverlay div:last-child p .ratio_number_values{
+        margin-left: 0.3em;
+        word-wrap: break-word;
+        word-break: break-word;
+    }
+
+    /* ........................................................................................... */
+    .each_Ratio_SmallOverlay{
+        height: 28vw;
+        width: 87vw;
+        border-bottom-left-radius: 21px;
+        border-top-left-radius: 21px;
+        border-top-right-radius: 21px;
+        color: var(--color1);
+        margin-bottom: 4vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .each_Ratio_SmallOverlay_titile{
+        width: 80%;
+        font-weight: bold;
+        font-size: 0.8em;
+    }
+    
+    .each_Ratio_SmallOverlay_details{
+        width: 80%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-top: 1vw;
+        align-items: flex-end;
+    }
+    
+    .each_Ratio_SmallOverlay_details div:first-child p{
+        font-size: 0.8em;
+        margin-bottom: 0.4vw;
+    }
+
+    .each_Ratio_SmallOverlay_details div:last-child{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .each_Ratio_SmallOverlay_details div:last-child h1{
+        font-size: 2.5em;
+        margin-left: 2vw;
+
+    }
+
+    .each_Ratio_SmallOverlay_details div:last-child h3{
+        font-size: 0.8em;
+        margin-bottom: 00px;
+    }
+
+    .sub{
+        font-size: 0.6em;
+    }
+    
+    #ratio_home_profit div:last-child{
+        margin-top: 1vw;
+    }
 }

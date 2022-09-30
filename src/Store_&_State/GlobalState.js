@@ -31,10 +31,17 @@ export const GlobalStateProvider = ({children}) => {
   const [grandTotal, setGrandTotal] = useState('0.00');
 
   const [flowId, setFlowId] = useState([]);
+
+  const [ratioPeriodInterval, setRatioPeriodInterval] = useState('daily');
+  const [ratioDateFrom, setRatioDateFrom] = useState('');
+  const [ratioDateTo, setRatioDateTo] = useState('');
+  const [ratioPeriod, setRatioPeriod] = useState('');
+
   
 
   return (
-    <GlobalState.Provider value={{ 
+    <GlobalState.Provider value={
+      { 
         stream, setStream, 
         streamList, setStreamList,
         priodStart, setPriodStart,
@@ -60,6 +67,11 @@ export const GlobalStateProvider = ({children}) => {
         grandTotal, setGrandTotal,
         
         flowId, setFlowId,
+
+        ratioPeriodInterval, setRatioPeriodInterval,
+        ratioDateFrom, setRatioDateFrom,
+        ratioDateTo, setRatioDateTo,
+        ratioPeriod, setRatioPeriod
       }}>
 
       {children}

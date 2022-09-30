@@ -11,6 +11,7 @@ import Moment from 'react-moment';
 import moment from "moment";
 import useGlobalState from "../../../Store_&_State/GlobalState"
 import { useNavigate } from "react-router-dom";
+import SubNav_mobile from '../../defualt_Layouts/subNav_mobile';
 
 import filter_icon_hover_icon from "../../../icons/filter_hover.png"
 
@@ -23,6 +24,8 @@ const Filtter = () => {
     const [dateFromDisp, setDateFromDisp] = useState("Old records");
     const [dateToDisp, setDateToDisp] = useState("Today");
     const [filterError, setFilterError] = useState("");
+    const [categorySelectFontWieght, setCategorySelectFontWieght] = useState("bolder");
+    const [categorySelectColor, setCategorySelectColor] = useState("");
 
     const {start_date, setStart_date} = useGlobalState('');
     const {end_date, setEnd_date} = useGlobalState('');
@@ -35,21 +38,18 @@ const Filtter = () => {
         setAccess(Access_token)
     }
 
+
+    
+
     // GET category ..................................................................................................
     const getCategories_success = async(data) => {
         setcategoryList(
             data.results.map(function(item){
               return(
-                <>
-                    <div id='each_filter_category'>
-                        <input type="radio" className='categoriesInput' id={"category"+item.id} name="category" value={item.name} onClick={()=>{setCategorySelected(item.id)}} />
-                        <label for={item.name}>{item.name}</label>
-                    </div>
-                </>
+                <option value={JSON.stringify(item.id)}>{item.name}</option> 
               )
             })
         )
-
     };
 
     const getCategories_fail = async(failed) => {
@@ -63,8 +63,18 @@ const Filtter = () => {
 
     useEffect(() => {
         load_categories()
-        document.getElementById('subNav_filtter').style.backgroundImage = `url(${filter_icon_hover_icon}) `;
+        // document.getElementById('subNav_filtter').style.backgroundImage = `url(${filter_icon_hover_icon}) `;
     }, []);
+
+    useEffect(() => {
+        if(categorySelected === '' || categorySelected === JSON.stringify('')){
+            setCategorySelectFontWieght('bold')
+            setCategorySelectColor('gray')
+        }else{
+            setCategorySelectFontWieght('normal')
+            setCategorySelectColor('black')
+        }
+    }, [categorySelected]);
     
 
     // category created................................................................................................
@@ -117,58 +127,57 @@ const Filtter = () => {
                 navigate("../ledger", { replace: true });
         }else{ 
             setFilterError(
-                <p id='FilterError'>sorry, you can not set filter To and From the same date</p>
+                <p id='FilterError'>sorry, you can not set filter To and From the same day</p>
             )
         }
     }   
 
     return (
-        <section className='column'>
-      <SubNav visibility="hidden"/>
-      <div className='row overlay'>
-        <LeftSide/>
-          <span id='flilter_Overlay'>
-            <div id='ledger_filtter'>
-                <div id='select_filter_category' className='column'>
-                    <strong><p id='select_filter_category_p'>Category</p></strong>
-                    <div className='row' id='each_filter_category_overlay'>
-                        {categoryList}
-                    </div>
-                </div>
-
-                <div id='addFiltterCategory_Overlay'>
-                    <strong><p>Add category</p></strong>
-                    <input className="add_category" type="text" id="category" onChange={(e)=>{setNewCategory(e.target.value)}} value={newCategory} />
-                    <button onClick={create_Category}>+</button>
-                </div>
-                
-                <div id='filterDate_overlay'>
-                    <strong><p id='setPeriod_p'>Set period</p></strong>
-                    <strong><p id='dateDisp'>{`From ${dateFromDisp} To ${dateToDisp}`}</p></strong>
-                    
-                    <div id='filterDate'>
-                        <div>
-                        <strong><span>From</span></strong>
-                            <input type="date" id="filterDateFrom" name="filterDateFrom" value ={dateFrom} onChange={changeDateFrom}/>
+        <>
+            <section id='filter_section' className='column'>
+            <SubNav visibility="hidden"/>
+            <div className='row overlay'>
+                <LeftSide/>
+                <span id='flilter_Overlay'>
+                    <div id='ledger_filtter'>
+                        <div id='filterCategoryOverlay' >
+                            <p id='filterCategoryOverlay_p'>Category <br/></p> 
+                            <select value={categorySelected} onChange={(e)=>{setCategorySelected(e.target.value)}} style={{fontWeight:categorySelectFontWieght, color:categorySelectColor}} >
+                                <option value={JSON.stringify('')}>Choose category</option>
+                                    {categoryList }
+                                {/* <option value="grapefruit">coco</option> */}
+                            </select>
                         </div>
+                        
+                        <div id='filterDate_overlay'>
+                            <strong><p id='setPeriod_p'>Set period</p></strong>
+                            <strong><p id='dateDisp'>{`From ${dateFromDisp} To ${dateToDisp}`}</p></strong>
+                            
+                            <div id='filterDate'>
+                                <div>
+                                    <strong><span>From</span></strong>
+                                    <input type="date" id="filterDateFrom" name="filterDateFrom" value ={dateFrom} onChange={changeDateFrom}/>
+                                </div>
 
-                        <div>
-                            <strong><span>To</span></strong>
-                            <input type="date" id="filterDateTo" name="filterDateTo" value={dateTo} onChange={changeDateTo}/>
+                                <div>
+                                    <strong><span>To</span></strong>
+                                    <input type="date" id="filterDateTo" name="filterDateTo" value={dateTo} onChange={changeDateTo}/>
+                                </div>
+                            </div>
+                            {filterError}
+
+                            <div id='filter_btn_Overlay'>
+                                <button id='filter_btn' onClick={filterData}>Filter</button>
+                            </div>
                         </div>
                     </div>
-                    {filterError}
-
-                    <div id='filter_btn_Overlay'>
-                        <button id='filter_btn' onClick={filterData}>Filter</button>
-                    </div>
-                </div>
+                </span>
+                <RightSide/>
             </div>
-          </span>
-        <RightSide/>
-      </div>
-    </section>
-);
+            </section>
+            <SubNav_mobile/>
+        </>
+    );
 }
 
 export default Filtter;

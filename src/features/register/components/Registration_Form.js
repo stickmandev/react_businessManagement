@@ -38,41 +38,41 @@ function RegistrationForm(Email_sent, Email_NotSent) {
   };
   
 
-  return (
+  return ( 
     <div id="regForm_overlay">
       <form id="regForm">
         <div className="inputTextOverlay">
-          First name<br/>
-          <input className="input_form" autoFocus type="text" id="FirstName" placeholder="John" onChange={(e)=>{setFirstName(e.target.value)}} value={FirstName} /><br/><br/>
+          <p>First name</p> 
+          <input className="input_form" autoFocus type="text" id="FirstName" placeholder="John" onChange={(e)=>{setFirstName(e.target.value)}} value={FirstName} />
         </div>
         
         <div className="inputTextOverlay">
-          Last name<br/>
-          <input className="input_form" type="text" id="LastName" placeholder="Robert" onChange={(e)=>{setLastName(e.target.value)}} value={LastName} /><br/><br/>
+        <p>Last name</p>
+          <input className="input_form" type="text" id="LastName" placeholder="Robert" onChange={(e)=>{setLastName(e.target.value)}} value={LastName} />
         </div>
         
         <div className="inputTextOverlay">
-          E-mail<br/>
-          <input className="input_form" type="text" id="email" placeholder="my_mail@mail.com" onChange={(e)=>{setEmail(e.target.value)}} value={email} /><br/><br/>
+        <p>E-mail</p>
+          <input className="input_form" type="text" id="email" placeholder="my_mail@mail.com" onChange={(e)=>{setEmail(e.target.value)}} value={email} />
         </div>
         
         <div className="inputTextOverlay">
-          Password<br/>
-          <input className="input_form" type="password" id="password" placeholder="************" onChange={(e)=>{setPassword(e.target.value)}} value={password} /><br/><br/>
+        <p>Password</p>
+          <input className="input_form" type="password" id="password" placeholder="************" onChange={(e)=>{setPassword(e.target.value)}} value={password} />
         </div>
         
         <div className="inputTextOverlay">
-          Confirm Password<br/>
-          <input className="input_form" type="password" id="confirm_password" placeholder="************" onChange={(e)=>{setConfirmPassword(e.target.value)}} value={ConfirmPassword} /><br/><br/>
+        <p>Confirm Password</p>
+          <input className="input_form" type="password" id="confirm_password" placeholder="************" onChange={(e)=>{setConfirmPassword(e.target.value)}} value={ConfirmPassword} />
         </div>
         
 
         <div style={{margin: "1em", color: "red"}}>{message}</div>
 
-        <div id="submitBTN_overlay">
-          <input id="submit" type="submit" value="Register" onClick={tryRegister} />
+        <div id="RegSubmitBTN_overlay">
+                <button id="submit" type="submit" value="Register" onClick={tryRegister}>REGISTER</button>
         </div>
-      </form><br/><br/>
+      </form>
       <p>Already have an account?</p>
         <Link to="/login" >
           <button id="loginBTN">login</button>

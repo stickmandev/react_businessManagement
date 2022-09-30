@@ -47,10 +47,10 @@ function CreateFlow(prop) {
 
                     for( var i =0; i < streamBTNs.length; i++){
                         streamBTNs[i].style.backgroundColor = 'white'
-                        streamBTNs[i].style.color = 'rgb(142, 143, 196)'
+                        streamBTNs[i].style.color = 'var(--color5)'
                     }
 
-                    e.target.style.backgroundColor = 'rgb(142, 143, 196)'
+                    e.target.style.backgroundColor = 'var(--color5)'
                     e.target.style.color = 'white'
                 }}>
                     {item.name}
@@ -216,7 +216,7 @@ function CreateFlow(prop) {
         overlayClassName="Overlay"
         ariaHideApp={false}
       >
-        <form id="loginForm" className='column' >
+        <form id="createForm" className='column' >
             <div id='form_blur_Overlay'></div>
             <div id='record_Header_Overlay' className='row'>
                 <h2>Add Record</h2> 
@@ -236,7 +236,7 @@ function CreateFlow(prop) {
             <div id='AmountOverlay' className="inputTextOverlay">
             <strong>Amount</strong><br/>
                 <div className='row'>
-                    <div>
+                    <div className='column'>
                         Credit<NumberFormat 
                             thousandSeparator={true} 
                             prefix={'$'}
@@ -248,7 +248,7 @@ function CreateFlow(prop) {
                         />
                     </div>
                     
-                    <div>
+                    <div className='column'>
                         Debit<NumberFormat 
                             thousandSeparator={true} 
                             prefix={'$'} 

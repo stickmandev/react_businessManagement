@@ -7,7 +7,7 @@ export const get_cashStream = async (pageNo="", success, fail, access, set_acces
   const success_Status = async(status, access_token) => {
     if (status  === 200){
       const response = await fetch(
-        `${backendURL}/ledger/cashstream/`,
+        `${backendURL}/backend_Ledger/cashstream/`,
         {
             method: 'GET',
             headers: {

@@ -1,17 +1,11 @@
 #profit_scroll_overlay{
-    /* height: 150vh; */
-    /* height: 75vw; */
-    height: 70vh;
+    height: calc(100vh - 12.35vw);
     background-color: var(--color1);
-    border-left: 3px solid var(--color4); 
-    border-right: 3px solid var(--color4); 
-    width: 100%;
-    display: flex;
-    /* flex-direction: column; */
-    /* align-items: center; */
-    /* overflow: scroll; */
+    border-left: 3px solid var(--color7); 
+    border-right: 3px solid var(--color7); 
     overflow-y: scroll;
     direction: rtl;
+    width: 100%;
 }
 
 #profit_scroll_overlay::-webkit-scrollbar{
@@ -20,13 +14,8 @@
     width: 0.4vw;
 }
 
-/* #profit_scroll_overlay::-webkit-scrollbar-track{
-    box-shadow: inset 0px 0px 6px rgba(0, 0, 0, 0.3);
-    background-color: rgb(223, 217, 217);
-} */
-
 #profit_scroll_overlay::-webkit-scrollbar-thumb{
-    background-color: var(--color5);
+    background-color: var(--color8);
     border-radius: 10px;
 }
 
@@ -35,30 +24,18 @@
 }
 
 #profitOverlaay{
-    /* height: 150vh; */
-    /* height: 75vw; */
-    height: 75vw;
-    background-color: var(--color1);
-    /* border-left: 3px solid var(--color4);  */
-    /* border-right: 3px solid var(--color4);  */
-    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* overflow: scroll; */
     direction: ltr;
 }
 
-
 /* FLAG............................................................................ */
 #ratio_Profit_flag{
-    /* margin-top: 8vh; */
     margin-top: 4.1vw;
     width: 62.4vw;
-    /* width: 88%; */
-    /* height: 27vh; */
     height: 13.8vw;
-    background-color: green; 
+    background-color: var(--color10); 
     border-bottom-left-radius: 21px;
     border-top-left-radius: 21px;
     border-top-right-radius: 21px;
@@ -83,8 +60,6 @@
 
 #profitImg{
     width: 27vw;
-    /* height: 8vh; */
-    /* height: 109%; */
     height: 15vw;
 }
 
@@ -106,7 +81,6 @@
 }
 
 #ratio_Profit_flag div:last-child div:first-child {
-    /* border: 2px solid black; */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -124,8 +98,6 @@
     display: flex;
     flex-direction: row;
     align-items: flex-end;
-    /* border: 2px solid black; */
-    /* padding-right: 0; */
     padding-left: 0;
     margin-top: 4.2vh;
 }
@@ -135,14 +107,12 @@
     display: inline-block;
     margin-left: 1.4vw;
     margin-right: 0;
-    /* border: 2px solid red; */
 }
 
 /* ratio_Profit_text............................................................................ */
 #ratio_Profit_text{
     margin-top: 8vh;
     width: 85%;
-    border: 2px solid black;
 }
 
 #ratio_Profit_text p{
@@ -151,15 +121,11 @@
 
 /* ratio table.................................................................................. */
 #ratio_table_background{
-    /* margin-top: 7vh; */
     margin-top: 3.6vw;
-    /* margin-bottom: 7vh; */
     margin-bottom: 3.6vw;
-    /* width: 88%; */
     width: 62.4vw;
-    /* height: 63.5vh; */
     height: 32.4vw;
-    background-color: rgb(228, 214, 241);
+    background-color: var(--color7);
     border-radius: 21px;
     display: flex;
     justify-content: center;
@@ -167,17 +133,12 @@
 }
 
 #ratio_table{
-    /* background-color: red; */
-    /* border: 1px solid red; */
     border-right: 1px solid black;
     border-bottom: 1px solid black;
-    /* width: 82%; */
     width: 51.2vw;
-    /* height: 80%; */
-    height: 25.9vw; 
-    /* overflow-y: overlay; */
+    max-height: 25.9vw; 
     overflow-y: scroll;
-    scrollbar-color: rebeccapurple green;
+    scrollbar-color: var(--color6) var(--color10);
     scrollbar-width: none;
 }
 
@@ -187,7 +148,6 @@
 }
 
 #rato_table_header{
-    /* border: 1px solid blue; */
     display: flex;
     flex-direction: row;
     position: sticky;
@@ -197,7 +157,6 @@
 #rato_table_header div{
     border-left: 1px solid black;
     border-bottom: 1px solid black;
-    /* height: 6vh; */
     height: 3.1vw;
     font-size: 1vw;
     display: flex;
@@ -208,12 +167,10 @@
 }
 
 #headers_date{
-    /* width: 15%; */
     width: 7.7vw;
 }
 
 .headers{
-    /* border: 1px solid black; */
     width: 21%;
 }
 
@@ -223,8 +180,6 @@
 }
 
 #rato_table_rows{
-    /* border: 1px solid blue; */
-    /* border: 1px solid black; */
     display: flex;
     flex-direction: row;
 }
@@ -240,6 +195,8 @@
     align-items: center;
     text-align: center;
     background-color: var(--color1);
+    word-wrap: break-word;
+    word-break: break-word;
 }
 
 #rato_table_rows_date{
@@ -247,7 +204,6 @@
 }
 
 .rato_table_rows{
-    /* border: 1px solid black; */
     width: 21%;
 }
 
@@ -258,30 +214,20 @@
 
 #ratioTable_sideBar_overlay{
     width: 1.2vw;
-    /* background-color: blue; */
-    /* border: 1px solid red; */
-    /* height: 80%; */
     height: 25.9vw; 
     margin-left: 1.5vw;
     overflow-y: auto;
     overflow-y: overlay;
-    /* scrollbar-width: 5vw; */
-    /* scrollbar-face-color: red; */
-    /* scrollbar-width: none; */
-    
 }
 
 #ratioTable_sideBar{
     width: 0vw;
-    background-color: red;
-    /* border: 1px solid yellow; */
+    background-color: var(--color2);
     margin-top: 6vh;
 }
 
-
 #ratioTable_sideBar_overlay::-webkit-scrollbar{
     height: 1.5vh;
-    /* height: .75vw; */
     width: 1.2vw;
 }
 
@@ -289,20 +235,487 @@
     box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
     background-color: gray;
     border-radius: 10px;
-    /* border-left: 9px solid white;
-    border-right: 9px solid white; */
 }
 
 #ratioTable_sideBar_overlay::-webkit-scrollbar-thumb{
-    background-color: rgb(228, 214, 241);
-    /* outline: 1px solid rgb(228, 214, 241); */
+    background-color: var(--color7);
     border-radius: 10px;
     border: 0.2vw solid gray;
-    
-    /* border-left: 8px solid white;
-    border-right: 7px solid white; */
 }
 
 #ratioTable_sideBar_overlay::-webkit-scrollbar-corner{
     background-color: darkgray;
+}
+
+/* set period.................................................................................. */
+#profitSetPeriod_Overlay{
+    display: flex;
+    flex-direction: column;
+    width: 85%;
+    width: 62.4vw;
+    margin-bottom: 4vw;
+}
+
+#profitSetPeriod_p{
+    width: 100%;
+    font-weight: bold;
+    position: relative;
+    margin-bottom: 1.5vw;
+    font-size: 1vw;
+}
+
+#profitSetPeriod_p:after{
+    position: absolute;
+    content:" ";
+    height: 2px;
+    width: calc(100% - 5.4vw);
+    background: var(--color7);
+    display: block;
+    position: absolute;
+    top: 60%;
+    left: 5.1vw;
+}
+
+#profitSetPeriod_formOverlay{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    height: 8vw;
+}
+
+#profitSetPeriodBTNS_Overlay{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: space-between;
+    width: 40%;
+}
+
+#profitSetPeriodBTNS_Overlay div:first-child{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 0.75vw;
+}
+
+#profitSetPeriodBTNS_Overlay div:last-child{
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    margin-bottom: 0.75vw;
+}
+
+#profitSetPeriodBTNS_Overlay button{
+    width: 40%;
+    color: var(--color5);
+}
+
+#profitSetPeriodBTNS_Overlay button:hover{
+    color: var(--color1);
+}
+
+#profitSetPeriodInput_Overlay{
+    width: 30%;
+    border: 2px solid var(--color7);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 20px;
+    margin-left: 7vw;
+}
+
+#profitSetPeriodInput_Overlay div{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    width: 83%;
+    margin-right: 20%;
+}
+
+#profitSetPeriodInput_Overlay div input{
+    width: 60%;
+    margin: 0;
+    margin-left: 0.5vw;
+    margin-top: 0.75vw;
+    margin-bottom: 0.75vw;
+    padding-left: 0.5vw;
+    padding-right: 0.75vw;
+
+}
+
+/* ...................................................................................................................................................... */
+#ratio_slide_BigOverlay{
+    width: 54vw;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 5vw;
+}
+
+#ratio_slide_overlay{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 40vw;
+    overflow-x: scroll;
+    overflow-x: overlay;
+}
+
+#ratio_slide_smallOverlay{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#ratio_slide_overlay::-webkit-scrollbar {
+    width: 0;  
+    background: transparent;  
+}
+
+.eachRatio_slide{
+    display: flex;
+    flex-direction: column;
+    align-items: center;    
+    justify-content: center;
+    border-radius: 15px;
+    background-color: antiquewhite;
+    width: 4vw;
+    height: 5vw;
+    margin-right: 5.2vw;
+    text-align: center;
+    font-size: 0.7vw;
+    padding-left: 0.5vw;
+    padding-right: 0.5vw;
+}
+
+.eachRatio_slide p{
+    margin-top: 0.5vw;
+    color: var(--color1);
+    font-weight: bold;
+}
+
+.eachRatio_slide:last-child{
+    margin-right: -5.2vw;
+}
+
+.eachRatio_slide_icon{
+    width: 2vw;
+    height: 2vw;
+}
+
+.eachRatio_slide_selected{
+    width: 7.5vw;
+    height: 8vw;
+    font-size: 0.9vw;
+}
+
+.eachRatio_slide_selected div{
+    width: 3.5vw;
+    height: 3.5vw;
+}
+
+#profits{
+    background-color: var(--color10);
+}
+
+#profits div{
+    background-image: url(../../../../icons/profit.png);
+    background-repeat: no-repeat;
+    background-origin: content-box;
+    background-position: center center;
+    background-size: auto;
+
+    -moz-background-size: cover;
+    -ms-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+#netProfit{
+    background-color: var(--color5);
+}
+
+#netProfit div{
+    background-image: url(../../../../icons/netProfit.png);
+    background-repeat: no-repeat;
+    background-origin: content-box;
+    background-position: center center;
+    background-size: auto;
+
+    -moz-background-size: cover;
+    -ms-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+#freeCashFlow{
+    background-color: var(--color12);
+}
+
+#freeCashFlow div{
+    background-image: url(../../../../icons/freeCashFlow.png);
+    background-repeat: no-repeat;
+    background-origin: content-box;
+    background-position: center center;
+    background-size: auto;
+
+    -moz-background-size: cover;
+    -ms-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+#ownersEquity{
+    background-color: var(--color6);
+}
+
+#ownersEquity div{
+    background-image: url(../../../../icons/ownersEquity.png);
+    background-repeat: no-repeat;
+    background-origin: content-box;
+    background-position: center center;
+    background-size: auto;
+
+    -moz-background-size: cover;
+    -ms-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+#leftArrow{
+    border: 0px solid black;
+    width: 2vw;
+    height: 2vw;
+
+    background-image: url(../../../../icons/left_arrow_circle.png);
+    background-repeat: no-repeat;
+    background-origin: content-box;
+    background-position: center center;
+    background-size: auto;
+
+    -moz-background-size: cover;
+    -ms-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+     
+}
+
+#rightArrow{
+    border: 0px solid black;
+    width: 2vw;
+    height: 2vw;
+
+    background-image: url(../../../../icons/right_arrow_circle.png);
+    background-repeat: no-repeat;
+    background-origin: content-box;
+    background-position: center center;
+    background-size: auto;
+
+    -moz-background-size: cover;
+    -ms-background-size: cover;
+    -o-background-size: cover;
+     background-size: cover;
+}
+
+@media screen and (max-width: 601px){
+    #profit_scroll_overlay{
+        height: 83.2vh;
+        border-left: 0px solid var(--color7); 
+        border-right: 0px solid var(--color7); 
+    }
+
+    /* FLAG............................................................................ */
+    #ratio_Profit_flag{
+        margin-top: 4.1vw;
+        width: 85%;
+        height: 28vw;
+        background-color: var(--color10); 
+        border-bottom-left-radius: 21px;
+        border-top-left-radius: 21px;
+        border-top-right-radius: 21px;
+        color: var(--color1);
+        display: flex;
+        overflow: hidden;
+    }
+
+    /* ratio_Profit_text............................................................................ */
+    #ratio_Profit_text{
+        margin-top: 8vh;
+        width: 85%;
+    }
+
+    #ratio_Profit_text p{
+        font-size: 1em;
+    }
+
+    /* ratio table.................................................................................. */
+    #ratio_table_background{
+        margin-top: 3.6vw;
+        margin-bottom: 3.6vw;
+        height: 110vw;
+        width: 98%;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        border-bottom-left-radius: 0px;
+        border-bottom-right-radius: 0px;
+    }
+
+    #ratio_table{
+        border-top: 1px solid black;
+        border-right: 1px solid black;
+        border-bottom: 1px solid black;
+        width: 95%;
+        max-height: 94%; 
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+    }
+
+    #rato_table_header div{
+        height: 10vw;
+        font-size: 0.65em;
+        word-wrap: break-word;
+        word-break: break-word;
+        background-color: var(--color1);
+        padding-left: 0.08em;
+        padding-right: 0.08em;
+    }
+
+    #rato_table_rows div{
+        height: 8vw;
+        font-size: 0.65em;
+        padding-left: 0.08em;
+        padding-right: 0.08em;
+    }
+
+    #ratioTable_sideBar_overlay{
+        width: 1.2vw;
+        height: 94%; 
+        margin-left: 1vw;
+    }
+
+    #ratioTable_sideBar{
+        width: 0vw;
+        background-color: var(--color11);
+        margin-top: 6vh;
+    }
+
+    /* set period.......................................................................................... */
+    #profitSetPeriod_Overlay{
+        width: 95vw;
+        margin-bottom: 6vw; 
+    }
+
+    #profitSetPeriod_p{
+        margin-bottom: 1.5vw;
+        font-size: 0.7em;
+    }
+
+    #profitSetPeriod_p:after{
+        width: calc(100% - 5em);
+        left: 5em;
+    }
+
+    #profitSetPeriod_formOverlay{
+        justify-content: space-between;
+        height: 26vw;
+    }
+
+    #profitSetPeriodBTNS_Overlay div:first-child{
+        width: 100%;
+        margin-top: 0.75vw;
+    }
+
+    #profitSetPeriodBTNS_Overlay div:last-child{
+        width: 100%;
+        margin-bottom: 0.75vw;
+    }
+
+    #profitSetPeriodBTNS_Overlay button{
+        font-size: 0.7em;
+        width: 45%;
+    }
+
+    #profitSetPeriodInput_Overlay{
+        width: 43%;
+        border: 2px solid var(--color7);
+        border-radius: 20px;
+        margin-left: 0vw;
+    }
+
+    #profitSetPeriodInput_Overlay div{
+        width: 83%;
+        margin-right: 0%;
+        font-size: 0.7em;
+    }
+
+    #profitSetPeriodInput_Overlay div input{
+        width: 70%;
+        margin: 0;
+        margin-left: 0.5vw;
+        padding-right: 0.75vw;
+        margin-top: 1vw;
+        margin-bottom: 1vw;
+        padding-left: 0.5vw;
+        height: 8vw;
+    }
+
+    /* ...................................................................................................................................................... */
+    #ratio_slide_BigOverlay{
+        width: 95vw;
+    }
+
+    #ratio_slide_overlay{
+        width: 75vw;
+    }
+
+    .eachRatio_slide{
+        border-radius: 5px;
+        width: 15vw;
+        height: 14vw;
+        margin-right: 5.2vw;
+        font-size: 0.5em;
+        padding-left: 1vw;
+        padding-right: 1vw;
+    }
+
+    .eachRatio_slide p{
+        margin-top: 1vw;
+    }
+
+    .eachRatio_slide:last-child{
+        margin-right: -5.2vw;
+    }
+
+    .eachRatio_slide_icon{
+        width: 6vw;
+        height: 6vw;
+    }
+
+    .eachRatio_slide_selected{
+        width: 20vw;
+        height: 20vw;
+        font-size: 0.8em;
+    }
+
+    .eachRatio_slide_selected div{
+        width: 8vw;
+        height: 8vw;
+    }
+
+    #leftArrow{
+        border: 0px solid black;
+        width: 6vw;
+        height: 6vw;
+    }
+
+    #rightArrow{
+        border: 0px solid black;
+        width: 6vw;
+        height: 6vw;
+    }
 }

@@ -17,7 +17,7 @@ export const get_cashFlow = async ( success, fail, start_date, end_date, filterC
         // console.log('fetching cashflow data')
         // fetching cashflow data
         const response = await fetch(
-          `${backendURL}/ledger/cashflow/filter/period?search=${search}&page=${pagez}`,
+          `${backendURL}/backend_Ledger/cashflow/filter/period?search=${search}&page=${pagez}`,
           {
               method: 'GET',
               headers: {
@@ -48,7 +48,7 @@ export const get_cashFlow = async ( success, fail, start_date, end_date, filterC
         // console.log('fetching cashflow data')
         // fetching cashflow data
         const response = await fetch(
-          `${backendURL}/ledger/cashflow/filter/period?start_date=${start_date}&end_date=${end_date}&date_range=&category=&cashStream=&page=${pagez}`,
+          `${backendURL}/backend_Ledger/cashflow/filter/period?start_date=${start_date}&end_date=${end_date}&date_range=&category=&cashStream=&page=${pagez}`,
           {
               method: 'GET',
               headers: {
@@ -79,7 +79,7 @@ export const get_cashFlow = async ( success, fail, start_date, end_date, filterC
         // console.log('fetching cashflow data')
         // fetching cashflow data
         const response = await fetch(
-          `${backendURL}/ledger/cashflow/filter/period?start_date=${start_date}&end_date=${end_date}&date_range=&category=${filterCategory}&cashStream=&page=${pagez}`,
+          `${backendURL}/backend_Ledger/cashflow/filter/period?start_date=${start_date}&end_date=${end_date}&date_range=&category=${filterCategory}&cashStream=&page=${pagez}`,
           {
               method: 'GET',
               headers: {
@@ -121,7 +121,7 @@ export const delete_cashFlow = async (flowId, success, access, set_access) => {
     if (status  === 200){
       // fetching cashflow data
       const response = await fetch(
-        `${backendURL}/ledger/cashflow/${flowId}/delete/`,
+        `${backendURL}/backend_Ledger/cashflow/${flowId}/delete/`,
         {
             method: 'DELETE',
             headers: {
@@ -156,7 +156,7 @@ export const create_cashFlow = async (description, selectd_Streamm, credit, debi
     if (status  === 200){
       // creating cashflow data
       const response = await fetch(
-        `${backendURL}/ledger/cashflow/`,
+        `${backendURL}/backend_Ledger/cashflow/`,
         {
           method: 'POST',
           headers: {
@@ -199,7 +199,7 @@ export const get_edit_cashFlow = async (flowId, success, fail, access, set_acces
     if (status  === 200){
       // fetching cashflow data
       const response = await fetch(
-        `${backendURL}/ledger/cashflow/${flowId}`,
+        `${backendURL}/backend_Ledger/cashflow/${flowId}`,
         {
             method: 'GET',
             headers: {
@@ -238,7 +238,7 @@ export const edit_cashFlow = async (flowId, description, selectd_Streamm, credit
     if (status  === 200){
       // creating cashflow data
       const response = await fetch(
-        `${backendURL}/ledger/cashflow/${flowId}/update/`,
+        `${backendURL}/backend_Ledger/cashflow/${flowId}/update/`,
         {
           method: 'POST',
           headers: {

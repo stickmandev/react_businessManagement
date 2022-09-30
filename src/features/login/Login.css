@@ -12,13 +12,14 @@ section{
 	align-items: center;
     width: 71.8%;
     /* height: 70vh; */
-    border-left: 3px solid var(--color4); 
-    border-right: 3px solid var(--color4); 
+    min-height: calc(100vh - 8vw);
+    border-left: 3px solid var(--color7); 
+    border-right: 3px solid var(--color7); 
     height: 79vh;
 }
 
 #loginTitle{
-    background-color: var(--color4);
+    background-color: var(--color8);
     width: 55%;
     /* height: 8vh; */
     height: 4vw;
@@ -26,6 +27,7 @@ section{
     display: flex;
 	align-items: center;
 }
+
 #loginTitle h1{
     font-size: 1.6vw;
     margin-left: 5vw;
@@ -38,7 +40,7 @@ section{
 	justify-content: center;
 	align-items: center;
     border: 1px solid black;
-    border-top: 1px solid var(--color4); 
+    border-top: 1px solid var(--color8); 
     width: 55%;
     /* height: 76%; */
     height: 30.6vw;
@@ -49,11 +51,26 @@ form{
     flex-direction: column;
 	align-items: center;
 }
+
+.inputTextOverlay{
+    width: 98%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    font-size: 4vw;
+    margin-bottom: 0vw;
+}
+
+.inputTextOverlay p{
+    margin-bottom: 0.3vw;
+    font-weight: bold;
+}
+
 #loginForm_overlay form input{
     width: 18vw;
     /* height: 5vh; */
     height: 2.55vw;
-    border: 2px solid var(--color4);   
+    /* border: 2px solid var(--color4);    */
     border-radius: 9px;  
     padding-left: 1vh;
     padding-right: 5px;
@@ -73,6 +90,8 @@ form{
 }
 
 #submitBTN_overlay{
+    margin-top: 1vw;
+    margin-bottom: 1vw;
     width: 100%;
     display: flex;
 	justify-content: center;
@@ -82,7 +101,9 @@ form{
 #loginForm_overlay p{
     font-size: 1vw;
     text-align: center;
+    margin-top: 1vw;
 }
+
 #registerBTN_Overlay{
     /* margin-top: ; */
     text-decoration: none;
@@ -105,8 +126,112 @@ form{
 }
 
 @media screen and (max-width: 601px){
-    #name a{
-        font-size: 2.5vw;
+    #loginOverlay {
+        justify-content: start;
+        align-items: center;
+        width: 100%;
+        border-left: 0px solid var(--color7); 
+        border-right: 0px solid var(--color7); 
+        height: 141.6vw;
+        /* border: 2px solid red; */
+    }
+    
+    #loginTitle{
+        background-color: var(--color8);
+        width: 100%;
+        height: 17vw;
+        border: 0px solid var(--color2);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #loginTitle h1{
+        font-size: 4.6vw;
+        margin-left: 0vw;
+        color: var(--color1);
+        margin-top: 8vw;
+    }   
+    
+    #loginForm_overlay{
+        margin-top: 10vw;
+        width: 90%;
+        height: 87vw;
+        border: 0px solid black;
+    }
+
+    #loginForm_overlay form{
+        width: 100%;
+        height: 85vh;
+        background-color: var(--color1);
+        border-radius: 10px;
+        transition: display 4s;
+        justify-content: start;
+        font-size: 3.5vw; 
+        overflow: scroll; 
+    }
+
+    .inputTextOverlay{
+        width: 98%;
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        font-size: 4vw;
+    }
+
+    .inputTextOverlay p{
+        margin-left: 3.5vw;
+        margin-bottom: 4px;
+        font-weight: bold;
+    }
+
+    #loginForm_overlay form input{
+        width: 90%;
+        height: 11vw;
+        border: 1.5px solid var(--color7);   
+        border-radius: 9px;  
+        padding-left: 5.5vw;
+        padding-right: 2vw;
+        margin-bottom: 3vw;
+    }
+    
+    #loginForm_overlay form :last-child button{
+        width: 24vw;
+        height: 9vw;
+        background-color: var(--color5);
+        color:  var(--baground2);   
+        border: 2px solid var(--color5);   
+        border-radius: 4px;  
+        font-size: 3vw;
+        color: var(--color1);
+    }
+    
+    #submitBTN_overlay{
+        margin-top: 2vw;
+        width: 100%;
+        display: flex;
+    }
+    
+    #loginForm_overlay p{
+        margin-top: 0px;
+        font-size: 3.5vw;
+        text-align: center;
+    }
+
+    #loginForm_overlay p span{
+        color: var(--color5);
+    }
+    
+    #registerBTN{
+        margin-top: 1vw;
+        height: 9vw;
+        width: 24vw;
+        background-color: var(--color5);
+        color:  var(--baground2);   
+        border: 2px solid var(--color5);   
+        border-radius: 4px;  
+        font-size: 3vw;
+        color: var(--color1);
     }
 }
 

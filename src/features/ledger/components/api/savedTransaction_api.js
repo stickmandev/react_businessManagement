@@ -7,7 +7,7 @@ export const get_savedTransctions = async (success, fail, access, set_access) =>
     if (status  === 200){
       // fetching cashflow data
       const response = await fetch(
-        `${backendURL}/ledger/savedtransaction/`,
+        `${backendURL}/backend_Ledger/savedtransaction/`,
         {
             method: 'GET',
             headers: {
@@ -46,7 +46,7 @@ export const create_savedTransctions = async (description, selectd_Streamm, cred
     if (status  === 200){
       // creating cashflow data
       const response = await fetch(
-        `${backendURL}/ledger/savedtransaction/`,
+        `${backendURL}/backend_Ledger/savedtransaction/`,
         {
           method: 'POST',
           headers: {
@@ -91,7 +91,7 @@ export const create_savedTransctions = async (description, selectd_Streamm, cred
 //       if (status  === 200){
 //         // fetching cashflow data
 //         const response = await fetch(
-//           `${backendURL}/ledger/cashflow/${flowId}/delete/`,
+//           `${backendURL}/backend_Ledger/cashflow/${flowId}/delete/`,
 //           {
 //               method: 'DELETE',
 //               headers: {

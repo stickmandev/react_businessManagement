@@ -9,6 +9,7 @@ import Moment from 'react-moment';
 import moment from "moment";
 import NumberFormat from 'react-number-format';
 import InfiniteScroll from 'react-infinite-scroll-component';
+import { NavLink } from "react-router-dom";
 
 function FlowDomManagement(prop) {
   const [flowList, setFlowList] = useState([]);
@@ -51,17 +52,10 @@ function FlowDomManagement(prop) {
   const {grandTotal, setGrandTotal} = useGlobalState('');
   
 
-  const streamWidth = 14.4
-  const periodWidth = 28
-  const flowWidth = streamWidth/2
-  const snWidth = periodWidth*(0.1)
-  const dateWidth = periodWidth*(0.2)
-  const descriptionWidth = periodWidth*(0.7)
-
   const [display, setDisplay] = useState("none");
   const [offsetTop, setoffsetTop] = useState(0);
   const [trHeight, setTrHeight] = useState(0);
-  const table_width = (stream.length*streamWidth) + periodWidth
+
 
   // .......................... Access .............................................................................
   const set_Access = (Access_token) => {
@@ -90,16 +84,16 @@ function FlowDomManagement(prop) {
 
           trEmpty.push(
             <>
-              <div className="td" style={{width:`${flowWidth}vw`}}></div>
-              <div className="td" style={{width:`${flowWidth}vw`}}></div>
+              <div className="td" ></div>
+              <div className="td" ></div>
             </>
           );
 
           if (balances[streamItem.name] !== undefined){
             total_balanceArr.push(
               <div id='totalBalance2'>
-                <div className='streamHeader' style={{height:"3.3vw"}}>
-                  <div className="th" style={{width:`${flowWidth}vw`}}>
+                <div className='streamHeader'>
+                  <div className="th" >
                     <NumberFormat
                       value={balances[streamItem.name].total_Credit}
                       displayType={'text'}
@@ -107,7 +101,7 @@ function FlowDomManagement(prop) {
                       // prefix={'$'}
                     />
                   </div>
-                  <div className="th" style={{width:`${flowWidth}vw`}}>
+                  <div className="th" >
                     <NumberFormat
                       value={balances[streamItem.name].total_Debit}
                       displayType={'text'}
@@ -117,7 +111,7 @@ function FlowDomManagement(prop) {
                   </div>
                 </div>
   
-                <div className="th" style={{height:"4vw"}}>
+                <div className="th stream th_stream">
                   <NumberFormat
                     value={balances[streamItem.name].balance}
                     displayType={'text'}
@@ -143,8 +137,8 @@ function FlowDomManagement(prop) {
                     for( var i =0; i < id; i++ ){
                       nullTd.push(
                         <>
-                          <div className="td" id={flowItem.id} style={{width:`${flowWidth}vw`}}>0</div>
-                          <div className="td" id={flowItem.id} style={{width:`${flowWidth}vw`}}>0</div>
+                          <div className="td" id={flowItem.id} >0</div>
+                          <div className="td" id={flowItem.id} >0</div>
                         </>
                       );
                     };
@@ -152,8 +146,8 @@ function FlowDomManagement(prop) {
                     for(var i = (arr.length-1); id < i; i-- ){
                       reversNullTd.push(
                         <>
-                          <div className="td" id={flowItem.id} style={{width:`${flowWidth}vw`}}>0</div>
-                          <div className="td" id={flowItem.id} style={{width:`${flowWidth}vw`}}>0</div>
+                          <div className="td" id={flowItem.id} >0</div>
+                          <div className="td" id={flowItem.id} >0</div>
                         </>
                       );
 
@@ -167,21 +161,21 @@ function FlowDomManagement(prop) {
                     
                     newList.push( 
                       <>
-                        <div  className="tr" key={sortByDateTime} id={flowItem.id} onMouseMove={mouseInEditDelete} onMouseOver={mouseInEditDelete} onMouseOut={mouseOutEditDelete} style={{ width:`${table_width}vw`}}>
-                          <div className="tr" style={{ position: 'sticky', left: `${0}`, width:`${31.5}vw`}} onMouseMove={mouseInEditDelete} onMouseOver={mouseInEditDelete} onMouseOut={mouseOutEditDelete}>
-                            <div className="td" id={flowItem.id} style={{width:`${snWidth}vw`}}>{pk+1}</div> 
-                            <div className="td" id={flowItem.id} style={{width:`${dateWidth}vw`}}> 
+                        <div  className="tr" key={sortByDateTime} id={flowItem.id} onMouseMove={mouseInEditDelete} onMouseOver={mouseInEditDelete} onMouseOut={mouseOutEditDelete} style={{ width:`calc((${stream.length} * var(--streamWidth)) + var(--periodWidth))`}}>
+                          <div className="tr" style={{ position: 'sticky', left: `${0}`}} onMouseMove={mouseInEditDelete} onMouseOver={mouseInEditDelete} onMouseOut={mouseOutEditDelete}>
+                            <div className="td ledgerSn desktop" id={flowItem.id}>{pk+1}</div> 
+                            <div className="td ledgerDates" id={flowItem.id}> 
                               <small style={{textAlign:'center'}}>
-                                <Moment format="YYYY/MM/DD HH:mm a">
+                                <Moment format="DD/MM/YY HH:mm a">
                                   {flowItem.created_at}
                                 </Moment>
                               </small>
                             </div>
-                            <div className="td discriptionTd" id={flowItem.id} style={{width:`${descriptionWidth}vw`}}>{flowItem.description}</div>
+                            <div className="td discriptionTd" id={flowItem.id} >{flowItem.description}</div>
                           </div>
                           <div className='tr'>
                             {nullTd}
-                            <div className="td" id={flowItem.id} style={{width:`${flowWidth}vw`}}>
+                            <div className="td" id={flowItem.id} >
                               
                               <NumberFormat
                                 value={flowItem.Credit}
@@ -189,7 +183,7 @@ function FlowDomManagement(prop) {
                                 thousandSeparator={true}
                               />
                             </div>
-                            <div className="td" id={flowItem.id} style={{width:`${flowWidth}vw`}}>
+                            <div className="td" id={flowItem.id} >
                             <NumberFormat
                                 value={flowItem.Debit}
                                 displayType={'text'}
@@ -216,8 +210,8 @@ function FlowDomManagement(prop) {
     setEmptyTR(trEmpty)
     setTotal_balance(
       <>
-        <div className="tr" style={{ position: 'sticky', left: `${0}`, width:`${32}vw`}}>
-          <div id='total_balance_dummyBlock' className="td" style={{ width:`${snWidth+dateWidth+descriptionWidth+1.29999}vw`}}>
+        <div className="tr" style={{ position: 'sticky', left: `${0}`}}>
+          <div id='total_balance_dummyBlock' className="td period" >
             <strong><p>Total($)</p></strong>
             <strong><p>Balance($)</p></strong>
           </div>
@@ -242,16 +236,16 @@ function FlowDomManagement(prop) {
   
               trEmpty.push(
                 <>
-                  <div className="td" style={{width:`${flowWidth}vw`}}></div>
-                  <div className="td" style={{width:`${flowWidth}vw`}}></div>
+                  <div className="td" ></div>
+                  <div className="td" ></div>
                 </>
               );
   
               if (balances[streamItem.name] !== undefined){
                 total_balanceArr.push(
                   <div>
-                    <div className='streamHeader' style={{height:"3.3vw"}}>
-                      <div className="th" style={{width:`${flowWidth}vw`}}>
+                    <div className='streamHeader'>
+                      <div className="th" >
                         <NumberFormat
                           value={balances[streamItem.name].total_Credit}
                           displayType={'text'}
@@ -259,7 +253,7 @@ function FlowDomManagement(prop) {
                           // prefix={'$'}
                         />
                       </div>
-                      <div className="th" style={{width:`${flowWidth}vw`}}>
+                      <div className="th" >
                         <NumberFormat
                           value={balances[streamItem.name].total_Debit}
                           displayType={'text'}
@@ -269,7 +263,7 @@ function FlowDomManagement(prop) {
                       </div>
                     </div>
       
-                    <div className="th" style={{height:"4vw"}}>
+                    <div className="th stream th_stream" >
                       <NumberFormat
                         value={balances[streamItem.name].balance}
                         displayType={'text'}
@@ -298,8 +292,8 @@ function FlowDomManagement(prop) {
                       for( var i =0; i < id; i++ ){
                         nullTd.push(
                           <>
-                            <div className="td" id={flowItem.id} style={{width:`${flowWidth}vw`}}>0</div>
-                            <div className="td" id={flowItem.id} style={{width:`${flowWidth}vw`}}>0</div>
+                            <div className="td" id={flowItem.id} >0</div>
+                            <div className="td" id={flowItem.id} >0</div>
                           </>
                         );
                       };
@@ -307,8 +301,8 @@ function FlowDomManagement(prop) {
                       for(var i = (arr.length-1); id < i; i-- ){
                         reversNullTd.push(
                           <>
-                            <div className="td" id={flowItem.id} style={{width:`${flowWidth}vw`}}>0</div>
-                            <div className="td" id={flowItem.id} style={{width:`${flowWidth}vw`}}>0</div>
+                            <div className="td" id={flowItem.id} >0</div>
+                            <div className="td" id={flowItem.id} >0</div>
                           </>
                         );
   
@@ -322,22 +316,22 @@ function FlowDomManagement(prop) {
 
                       setFlow(oldArray => [ ( 
                           <>
-                            <div  className="tr" key={sortByDateTime} id={flowItem.id} onMouseMove={mouseInEditDelete} onMouseOver={mouseInEditDelete} onMouseOut={mouseOutEditDelete} style={{ width:`${table_width}vw`}}>
-                              <div className="tr sticky_offset" style={{ position: 'sticky', left: `${0}`, width:`${31.5}vw`}} onMouseMove={mouseInEditDelete} onMouseOver={mouseInEditDelete} onMouseOut={mouseOutEditDelete}>
-                                <div className="td" id={flowItem.id} style={{width:`${snWidth}vw`}}>{sn+pk+1}</div> 
-                                <div className="td" id={flowItem.id} style={{width:`${dateWidth}vw`}}> 
+                            <div  className="tr" key={sortByDateTime} id={flowItem.id} onMouseMove={mouseInEditDelete} onMouseOver={mouseInEditDelete} onMouseOut={mouseOutEditDelete} style={{ width:`calc((${stream.length} * var(--streamWidth)) + var(--periodWidth))`}}>
+                              <div className="tr sticky_offset" style={{ position: 'sticky', left: `${0}`}} onMouseMove={mouseInEditDelete} onMouseOver={mouseInEditDelete} onMouseOut={mouseOutEditDelete}>
+                                <div className="td ledgerSn desktop" id={flowItem.id}>{sn+pk+1}</div> 
+                                <div className="td ledgerDates" id={flowItem.id}> 
                                   <small style={{textAlign:'center'}}>
-                                    <Moment format="YYYY/MM/DD HH:mm a">
+                                    <Moment format="DD/MM/YY HH:mm a">
                                       {flowItem.created_at}
                                     </Moment>
                                   </small>
                                 </div>
-                                <div className="td discriptionTd" id={flowItem.id} style={{width:`${descriptionWidth}vw`}}>{flowItem.description}</div>
+                                <div className="td discriptionTd" id={flowItem.id}>{flowItem.description}</div>
                               </div>
                               {/* {moment(new Date(flowItem.created_at.slice(0, 10))).format('DD-MM-YYYY')} */}
                               <div className='tr'>
                                 {nullTd}
-                                <div className="td" id={flowItem.id} style={{width:`${flowWidth}vw`}}>
+                                <div className="td" id={flowItem.id} >
                                   
                                   <NumberFormat
                                     value={flowItem.Credit}
@@ -346,7 +340,7 @@ function FlowDomManagement(prop) {
                                     // prefix={'$'}
                                   />
                                 </div>
-                                <div className="td" id={flowItem.id} style={{width:`${flowWidth}vw`}}>
+                                <div className="td" id={flowItem.id} >
                                 <NumberFormat
                                     value={flowItem.Debit}
                                     displayType={'text'}
@@ -372,8 +366,8 @@ function FlowDomManagement(prop) {
         setEmptyTR(trEmpty)
         setTotal_balance(
           <>
-            <div className="tr" style={{ position: 'sticky', left: `${0}`, width:`${32}vw`}}>
-              <div id='total_balance_dummyBlock' className="td" style={{ width:`${snWidth+dateWidth+descriptionWidth+1.29999}vw`}}>
+            <div className="tr" style={{ position: 'sticky', left: `${0}`}}>
+              <div id='total_balance_dummyBlock' className="td" >
                 <strong><p>Total($)</p></strong>
                 <strong><p>Balance($)</p></strong>
               </div>
@@ -535,12 +529,15 @@ function FlowDomManagement(prop) {
         >
           {/* {sortedFlow} */}
 
-          <div className="tr" id="addTr" style={{ width:`${table_width}vw`}}>
-            <div  className="tr" style={{position: 'sticky', left: `${0}`, width:`${31.5}vw`}}>
-              <div className="td" style={{width:`${snWidth}vw`}}></div> 
-              <div className="td" style={{width:`${dateWidth}vw`}}></div>
-              <div className="td discriptionTd" style={{width:`${descriptionWidth}vw`}}>
-                <button id='open_CreateFlowModal_btn' onClick={()=>{setCreateFlowIsOpen(true); prop.blur(8)}}> <span></span> Add</button> 
+          <div className="tr" id="addTr" style={{ width:`calc((${stream.length} * var(--streamWidth)) + var(--periodWidth))`}}>
+            <div  className="tr" style={{position: 'sticky', left: `${0}` }}>
+              <div className="td ledgerSn desktop" ></div> 
+              <div className="td ledgerDates"></div>
+              <div className="td discriptionTd" >
+                <button  className='desktop'  onClick={()=>{setCreateFlowIsOpen(true); prop.blur(8)}}> <span></span> Add</button> 
+                <NavLink id='mobileAddLedger' className='mobile' to="/ledger/CreateFlow">
+                    <span></span> Add
+                </NavLink>
               </div>
             </div>
             <div className="tr">{emptyTR}</div>
@@ -552,8 +549,11 @@ function FlowDomManagement(prop) {
 
         
     <div id="EditDeleteOverlay" onMouseOver={()=>{ setDisplay("flex") }} onMouseOut={mouseOutEditDelete} style={{  display:display, top:offsetTop, height:trHeight}} >
-      <button onClick={deleteFlowData} ></button><br/>
-      <button onClick={editFlowData}></button>
+      <button id='deleteBtn' onClick={deleteFlowData} ></button><br/>
+      <NavLink id='mobileAddLedger' className='mobile' to="/ledger/editFlow">
+        <button className='mobile editBtn'></button>
+      </NavLink>
+      <button className='desktop editBtn' onClick={editFlowData}></button>
     </div>
     </>
   )

@@ -6,7 +6,7 @@ import React from 'react';
 
 const RightSide = () => {
     return (
-        <span id='rightSpan'>
+        <span id='rightSpan' className='desktop'>
             RightSide
         </span>
     );

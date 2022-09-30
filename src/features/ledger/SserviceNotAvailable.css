@@ -1,0 +1,77 @@
+#settingsOverlay{
+    /* height: 76vh; */
+    height: calc(100vh - 12.35vw);
+    /* min-height: calc(100vh - 8vw); */
+    background-color: var(--color1);
+    border-left: 3px solid var(--color4); 
+    border-right: 3px solid var(--color4); 
+    display: flex;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+} 
+
+#oops_Overlay{
+    margin-top: 5vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#oops_Overlay p:first-child{
+    font-weight: bold;
+    margin-top: 30%;
+    margin-bottom: 3%;
+    font-size: 1vw;
+}
+
+#oops_Overlay p{
+    font-size: 1vw;
+}
+
+#oopsIcon{
+    margin-top: 4%;
+    width: 16vw;
+    height: 13vw;
+    background-color: yellow;
+
+    background-color: white;
+    background-color: white;
+    background-image: url(../../icons/empty.png);
+    background-repeat: no-repeat;
+    background-origin: content-box;
+    background-position: center center;
+    background-size: auto;
+
+    -moz-background-size: cover;
+    -ms-background-size: cover;
+    -o-background-size: cover;
+     background-size: cover;
+}
+
+@media screen and (max-width: 601px){
+    #settingsOverlay{
+        height: calc(91.2vh - 12.35vw);
+        border-left: 0px solid var(--color4); 
+        border-right: 0px solid var(--color4); 
+        width: 100%;
+    } 
+    
+    #oops_Overlay p:first-child{
+        margin-top: 5%;
+        margin-bottom: 3%;
+        font-size: 1em;
+    }
+    
+    #oops_Overlay p{
+        font-size: 1em;
+    }
+    
+    #oopsIcon{
+        /* margin-top: 4%; */
+        width: 28vw;
+        height: 25vw;
+    }
+}

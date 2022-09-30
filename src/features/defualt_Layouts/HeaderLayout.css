@@ -3,13 +3,32 @@ header{
 }
 
 #navbar1{
-    background-color: var(--color3);
+    background-color: var(--color4);
     display: flex;
     flex-direction: row;
 	justify-content: space-between;
 	align-items: center;
     height: 4vw;
 } 
+
+#navbarMobile{
+    background-color: var(--color4);
+    display: flex;
+    flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+    /* padding-top: 3.5vh;
+    padding-bottom: 3.5vh; */
+    /* height: 10vw; */
+    height: 7vh;
+    /* max-height: 10vw; */
+    min-height: 10.5vw;
+    /* border: 1px solid green; */
+}  
+
+#navbarMobile #name a{
+    font-size: 1.8vw;
+}
 
 #name{
     margin-left: 5vw;
@@ -26,6 +45,11 @@ ul{
     margin-right: 8.4vw;
 }
 
+#navbarMobile ul{
+    display: flex;
+    margin-right: 4vw;
+}
+
 li{
     display: inline;
     margin-left: 4vw;
@@ -40,13 +64,7 @@ li a{
 
 
 @media screen and (max-width: 601px){
-    #name a{
-        font-size: 2vw;
-    }
 
-    li{
-        font-size: 2.5vw;
-    }
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */

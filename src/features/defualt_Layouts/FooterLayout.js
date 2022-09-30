@@ -1,9 +1,13 @@
 import React from 'react'
 import "./FooterLayout.css"
+import SubNav_mobile from './subNav_mobile'
 
 function FooterLayout() {
   return (
-    <footer>@Business 2022</footer>
+    <>
+      <footer className='desktop'>@Business 2022</footer>
+      {/* <SubNav_mobile/> */}
+    </>
   )
 }
 

@@ -1,9 +1,36 @@
-#flilter_Overlay{
-    /* width: 50%; */
-    height: 70vh;
+input{
+    border-radius: 9px; 
+    height: 2.3vw;
+    border: 2.5px solid var(--color7);
+    font-size: 0.8vw; 
+    /* height: 2.1vw; */
+}
+
+button{
     background-color: var(--color1);
-    border-left: 3px solid var(--color4); 
-    border-right: 3px solid var(--color4); 
+    border: 2.5px solid var(--color5);
+    width: 6vw;
+    height: 2.3vw;
+    border-radius: 4px;
+    font-size: 0.8vw; 
+    color: var(--color5);
+}
+
+button:hover{
+    background-color: var(--color5);
+    border: 2.5px solid var(--color5);
+}
+
+select{
+    height: 2.5vw;
+}
+
+#flilter_Overlay{
+    /* height: 70vh; */
+    height: calc(100vh - 12.35vw);
+    background-color: var(--color1);
+    border-left: 3px solid var(--color7); 
+    border-right: 3px solid var(--color7); 
     display: flex;
     position: relative;
     display: flex;
@@ -11,120 +38,50 @@
 	align-items: center;
     width: 100%;
 }
+
 #ledger_filtter{
     width: 85%;
-    /* border: 2px solid rgb(110, 109, 109); */
-    margin-top: 6vh;
     margin-top: 3vw;
 }
 
-#select_filter_category_p{
-    position: relative;
+#filterCategoryOverlay{
+    margin-top: 0vw;
+    margin-bottom: 4vw;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
-#select_filter_category_p:after{
-    position: absolute;
+#filterCategoryOverlay_p{
+    margin-bottom: 0.7vw;
+    width: 100%;
+    position: relative;
+    font-weight: bold;
+}
+
+#filterCategoryOverlay_p:after{
     content:" ";
-    height: 2px;
-    /* width: 92.5%; */
-    width: 49.5vw;
-    background: var(--color4);
+    height: 1.5px;
+    width: calc(93.4% - 4.5em);
+    background: var(--color7);
     display: block;
     position: absolute;
-    top: 60%;
-    /* left: 7.5%; */
-    left: 4vw;
+    top: 68%;
+    left: 4.5em;      /* change to em when the em font size for this p have been set */
 }
 
-#select_filter_category{
-    /* border: 2px solid red; */
-    display: flex;
-    width: 87%;
-
-}
-
-#addFiltterCategory_Overlay{
-    margin-top: 2.5vh;
-    margin-top: 1.25vw;
-    /* border: 2px solid black; */
-}
-
-#addFiltterCategory_Overlay input{
-    width: 20%;
-    margin-top: 0.8vh;
-    margin-top: 0.4vw;
-    padding-left: 3%;
-    padding-right: 3%;
-    height: 4vh;
-    height: 2vw;
-}
-
-#addFiltterCategory_Overlay button{
-    width: 1vw;
-    height: 2vh;
-    height: 1vw;
+#filterCategoryOverlay select{
+    border: 2px solid var(--color7);
+    background-color: white;
     border-radius: 9px;
-    margin-left: 1%;
-}
-
-#each_filter_category {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    /* border: 2px solid green; */
-    margin-right: 2%;
-    width: 14.3%;
-
-}
-
-#each_filter_category_overlay{
-    /* border: 2px solid blue; */
-    margin-top: 1.3vh;
-    margin-top: 0.8vw;
+    width: 26.4%;
+    margin-top: 0.15vw;
     flex-wrap: wrap;
+    padding-left: 0%;
 }
 
-#select_filter_category div div input{
-    width: 1vw;
-    height: 3vh;
-    height: 1.5vw;
-    border: 2px solid black;
-}
-
-#select_filter_category div label{
-    margin-left: 0.5vw;
-    
-    font-weight: lighter;
-}
-
-#filtter_addCategoryOverlay{
-    margin-top: 2.5vh;
-    margin-top: 1.25vw;
-    width: 90%;
-    /* border: 1px solid var(--color2); */
-}
-
-#filtter_addCategoryOverlay input{
-    width: 40%;
-    margin-top: 0.8vh;
-    margin-top: 0.4vw;
-    padding-left: 3%;
-    padding-right: 3%;
-}
-
-#filtter_addCategoryOverlay button{
-    width: 1vw;
-    height: 2vh;
-    height: 1vw;
-    border-radius: 9px;
-    margin-left: 1%;
-}
-
- 
 #filterDate_overlay{
-    margin-top: 5vh;
     margin-top: 2.5vw;
-    /* border: 2px solid black; */
 }
 
 #setPeriod_p{
@@ -135,39 +92,28 @@
     position: absolute;
     content:" ";
     height: 2px;
-    /* width: 92.5%; */
-    width: 49vw;
-    background: var(--color4);
+    width: calc(92.1% - 4.6em);
+    background: var(--color7);
     display: block;
     position: absolute;
     top: 60%;
-    /* left: 7.5%; */
-    left: 4.5vw;
+    left: 5em;
 }
 
 #dateDisp{
-    color: rgb(113, 126, 139);
-    /* margin-top: 3vh;
-    margin-bottom: 3vh; */
+    color: var(--color8);
     margin-top: 1.5vw;
     margin-bottom: 1.5vw;
 }
-
-/* #filterDate{
-    border: 2px solid blue;
-} */
 
 #filterDate div{
     display: flex;
     flex-direction: row;
     align-items: center;
-    /* margin-bottom: 2.5vh; */
     margin-bottom: 1.25vw;
-    /* border: 2px solid green; */
 }
 
 #filterDate div span{
-    /* border: 2px solid orange; */
     display: flex;
     flex-direction: row-reverse;
     width: 2.3vw;
@@ -175,29 +121,172 @@
 }
 
 #filterDate div input{
-    color: rgb(173, 173, 173);
+    color: var(--color8);
     width: 12.5vw;
-    height: 2.1vw;
     padding-left: 8px;
 }
 
 #filter_btn_Overlay{
-    /* margin-top: 8vh; */
     margin-top: 4vw;
-    /* border: 2px solid orange; */
     display: flex;
     flex-direction: row-reverse;
 
 }
+
 #filter_btn{
     background-color: var(--color5);
     color: var(--color1);
     width: 12vw;
-    /* height: 6vh; */
     height: 3vw;
     margin-right: 4vw;
 }
 
 #FilterError{
     color: red;
+}
+
+@media screen and (max-width: 601px){
+    #filter_section{
+        height: 100%;
+        height: 83.2vh;
+    }
+
+    input{
+        border-radius: 9px; 
+        height: 8.3vw;
+        border: 2px solid var(--color7);
+        /* font-size: 0.88em; */
+        height: 11vw;
+        background-color: white;
+    }
+
+    span{
+        font-size: 0.88em;
+    }
+    
+    button{
+        background-color: var(--color1);
+        border: 2px solid var(--color5);
+        width: 20.8vw;
+        border-radius: 4px;
+        color: var(--color5);
+        height: 10vw;
+    }
+    
+    select{
+        height: 10vw;
+    }
+    
+    #flilter_Overlay{
+        border-left: 0px solid var(--color7); 
+        border-right: 0px solid var(--color7); 
+    }
+    
+    #ledger_filtter{
+        width: 89.5%;
+        margin-top: 3vw;
+    }
+    
+    #filterCategoryOverlay{
+        margin-top: 3vw;
+        margin-bottom: 4vw;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    #filterCategoryOverlay_p{
+        margin-bottom: 0.7vw;
+        width: 100%;
+        position: relative;
+        font-weight: bold;
+    }
+    
+    #filterCategoryOverlay_p:after{
+        content:" ";
+        height: 1.5px;
+        width: calc(93.4% - 4em);
+        background: var(--color7);
+        display: block;
+        position: absolute;
+        top: 68%;
+        left: 4.2em;      /* change to em when the em font size for this p have been set */
+    }
+    
+    #filterCategoryOverlay select{
+        border: 2px solid var(--color7);
+        background-color: white;
+        border-radius: 9px;
+        width: calc(2.29em + 43%);
+        margin-top: 0.15vw;
+        flex-wrap: wrap;
+        padding-left: 0%;
+    }
+    
+    #setPeriod_p{
+        position: relative;
+    }
+    
+    #setPeriod_p:after{
+        position: absolute;
+        content:" ";
+        height: 1.5px;
+        width: calc(93% - 4.8em);
+        background: var(--color7);
+        display: block;
+        position: absolute;
+        top: 68%;
+        left: 4.8em;
+    }
+    
+    #dateDisp{
+        color: rgb(113, 126, 139);
+        margin-top: 1.5vw;
+        margin-bottom: 1.5vw;
+    }
+    
+    #filterDate_overlay{
+        margin-top: 8vw;
+        margin: 2px solid red;
+    }
+    
+    #filterDate div{
+        display: flex;
+        flex-direction: row;    
+        align-items: center;
+        margin-bottom: 1.25vw;
+    }
+    
+    #filterDate div span{
+        display: flex;
+        flex-direction: row-reverse;
+        width: 2.29em;
+        margin-right: 0.6vw;
+    }
+    
+    #filterDate div input{
+        color: rgb(173, 173, 173);
+        width: 40%;
+        padding-left: 8px;
+        height: 9vw;
+    }
+    
+    #filter_btn_Overlay{
+        margin-top: 4vw;
+        display: flex;
+        flex-direction: row-reverse;
+    
+    }
+    #filter_btn{
+        background-color: var(--color5);
+        color: var(--color1);
+        width: 20vw;
+        height: 10vw;
+        margin-right: 4vw;
+        font-size: 0.88em;
+    }
+    
+    #FilterError{
+        color: red;
+    }
 }

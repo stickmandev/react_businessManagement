@@ -20,10 +20,137 @@ code {
   scroll-behavior: smooth;
   scroll-padding-top: 2rem;
 
-  --color1: rgb(255, 255, 255);
-  --color2: rgb(0, 0, 0);
-  --color3: rgb(68, 51, 78);
-  --color4: rgb(180, 179, 180);
-  --color5: rgb(142, 143, 196);
+  --color1: #ffffff;
+  --color2: #000000;
+  --color3: #292d32;
+  --color4: #3a354d;
+  --color5: #7f77e0;
+  --color6: #8a57ab;
+  --color7: #dbd8ff;
+  --color8: #9598a6;
+  --color9: #f7f6fc;
+  --color10: #117d47;
+  --color11: #cf0e0e;
+  --color12: #cf950e;
+
+  --textColor1: #ffffff;
+  --textColor2: #000000;
+  --textColor3: #292d32;
+  --textColor4: #3a354d;
+  --textColor5: #7f77e0;
+  --textColor6: #8a57ab;
+  --textColor7: #dbd8ff;
+  --textColor8: #9598a6;
+  --textColor9: #f7f6fc;
+  --textColor10: #117d47;
+  --textColor11: #cf0e0e;
+  --textColor12: #cf950e;
+
+  --outlineColor1: #ffffff;
+  --outlineColor2: #000000;
+  --outlineColor3: #292d32;
+  --outlineColor4: #3a354d;
+  --outlineColor5: #7f77e0;
+  --outlineColor6: #8a57ab;
+  --outlineColor7: #dbd8ff;
+  --outlineColor8: #9598a6;
+  --outlineColor9: #f7f6fc;
+  --outlineColor10: #117d47;
+  --outlineColor11: #cf0e0e;
+  --outlineColor12: #cf950e;
+
+  --btnColor1: #ffffff;
+  --btnColor2: #000000;
+  --btnColor3: #292d32;
+  --btnColor4: #3a354d;
+  --btnColor5: #7f77e0;
+  --btnColor6: #8a57ab;
+  --btnColor7: #dbd8ff;
+  --btnColor8: #9598a6;
+  --btnColor9: #f7f6fc;
+  --btnColor10: #117d47;
+  --btnColor11: #cf0e0e;
+  --btnColor12: #cf950e;
+  
+  --inputBorderColor1: #ffffff;
+  --inputBorderColor2: #000000;
+  --inputBorderColor3: #292d32;
+  --inputBorderColor4: #3a354d;
+  --inputBorderColor5: #7f77e0;
+  --inputBorderColor6: #8a57ab;
+  --inputBorderColor7: #dbd8ff;
+  --inputBorderColor8: #9598a6;
+  --inputBorderColor9: #f7f6fc;
+  --inputBorderColor10: #117d47;
+  --inputBorderColor11: #cf0e0e;
+  --inputBorderColor12: #cf950e;
+
+  --lineColor1: #ffffff;
+  --lineColor2: #000000;
+  --lineColor3: #292d32;
+  --lineColor4: #3a354d;
+  --lineColor5: #7f77e0;
+  --lineColor6: #8a57ab;
+  --lineColor7: #dbd8ff;
+  --lineColor8: #9598a6;
+  --lineColor9: #f7f6fc;
+  --lineColor10: #117d47;
+  --lineColor11: #cf0e0e;
+  --lineColor12: #cf950e;
+
+
   font-family: "Segoe UI", Arial, sans-serif;
+
+
+
+
+  /* ledger desktop........................................*/
+  --streamWidth: 14.4vw;
+  --periodWidth: 28vw;
+
+  --flowWidth: calc(var(--streamWidth) / 2);
+  --snWidth: calc(var(--periodWidth) * 0.1);
+  --dateWidth: calc(var(--periodWidth) * 0.2);
+  --descriptionWidth: calc(var(--periodWidth) * 0.7);
+
+  /* ledger mobile........................................*/
+  --mobile_streamWidth: 24vw;
+  --mobile_periodWidth: 30vw;
+
+  --mobile_flowWidth: calc(var(--mobile_streamWidth) / 2);
+  /* --mobile_snWidth: calc(var(--mobile_periodWidth) * 0.1); */
+  --mobile_dateWidth: calc(var(--mobile_periodWidth) * 0.3);
+  --mobile_descriptionWidth: calc(var(--mobile_periodWidth) * 0.7);
+}
+
+
+input{
+  outline-color: var(--color5);
+  border: 2px solid var(--color7);
+}
+
+
+select{
+  outline-color: var(--color5);
+  border: 2px solid var(--color7);
+}
+
+
+.desktop{
+  /* display: block !important;  */
+  /* background-color: red; */
+}
+
+.mobile{
+  display: none !important;
+}
+
+
+@media screen and (max-width: 601px){
+  input{
+    outline-color: var(--color5);
+    height: 10vw;
+    font-size: 0.88em; 
+    border: 1.5px solid var(--color7);   
+  }
 }

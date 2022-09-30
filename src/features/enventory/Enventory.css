@@ -1,5 +1,6 @@
 #EnventoryOverlay{
-    height: 85vh;
+    /* height: 85vh; */
+    min-height: calc(100vh - 8vw);
     background-color: var(--color1);
     border-left: 3px solid var(--color4); 
     border-right: 3px solid var(--color4); 

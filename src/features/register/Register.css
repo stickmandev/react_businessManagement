@@ -3,7 +3,36 @@ section{
     display: flex;
     flex-direction: column;
 	align-items: center;
-    /* height: 90vh; */
+}
+
+#registerOverlay_scroll{
+    /* display: flex; */
+    /* flex-direction: column; */
+	/* justify-content: center; */
+	/* align-items: center;  */
+    width: 71.8%;
+    border-left: 3px solid var(--color7); 
+    border-right: 3px solid var(--color7);
+    /* height: 79.5vh;    */
+    height: calc(100vh - 8vw);
+    overflow-y: scroll;
+    direction: rtl;
+}
+
+
+#registerOverlay_scroll::-webkit-scrollbar{
+    height: 1vw;
+    /* width: 0.8vw; */
+    width: 0.4vw;
+}
+
+#registerOverlay_scroll::-webkit-scrollbar-thumb{
+    background-color: var(--color8);
+    border-radius: 10px;
+}
+
+#registerOverlay_scroll::-webkit-scrollbar-corner{
+    background-color: darkgray;
 }
 
 #registerOverlay {
@@ -11,25 +40,28 @@ section{
     flex-direction: column;
 	justify-content: center;
 	align-items: center;
-    width: 71.8%;
-    height: 79.5vh;   
-    border-left: 3px solid var(--color4); 
-    border-right: 3px solid var(--color4);
-    overflow-y: scroll;
+    width: 100%;
+    /* height: 79.5vh;    */
+    /* height: calc(100vh - 8vw); */
+    
+    /* overflow-y: scroll; */
+    /* border: 3px solid black; */
+    direction: ltr;
+    margin-bottom: 5vw;
 }
 
 #regTitle{
-    background-color: var(--color4);
+    background-color: var(--color8);
     width: 55%;
-    /* height: 8vh; */
     height: 4vw;
     border: 1px solid var(--color4);
     display: flex;
 	align-items: center;
-    /* margin-top: 4vw; */
+    margin-top: 2.2vw;
 }
+
 #regTitle h1{
-    font-size: 1.6vw;
+    font-size: 1.3vw;
     margin-left: 5vw;
     color: var(--color1);
 }   
@@ -42,9 +74,7 @@ section{
     border: 1px solid black;
     border-top: 1px solid var(--color4); 
     width: 55%;
-    /* height: 76%; */
-    height: 35.5vw;
-    /* margin-bottom: 9vw;  */
+    /* height: 80.5vw; */
 }
 
 form{
@@ -53,14 +83,27 @@ form{
 	align-items: center;
     margin: 0px;
     padding: 0px;
-    border-bottom: 6vw; 
+    /* border-bottom: 6vw;  */
 }
+
+.inputTextOverlay{
+    width: 98%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    font-size: 0.8vw;
+    margin-bottom: 0vw;
+}
+
+.inputTextOverlay p{
+    margin-bottom: 0.3vw;
+    font-weight: bold;
+}   
 
 #regForm_overlay form input{
     width: 18vw;
-    /* height: 5vh; */
     height: 2.5vw;
-    border: 2px solid var(--color4);   
+    /* border: 2px solid var(--color4);    */
     border-radius: 9px;  
     padding-left: 15px;
     padding-right: 5px;
@@ -68,48 +111,161 @@ form{
 
 #regForm_overlay form :last-child input{
     width: 7vw;
-    /* height: 5vh; */
     height: 2.5vw;
     background-color: var(--color5);
     color:  var(--baground2);   
-    border: 2px solid var(--color5);   
+    /* border: 2px solid var(--color5);    */
     border-radius: 4px;  
     font-size: 0.8vw;
     color: var(--color1);
 }
 
-
-
-#submitBTN_overlay{
+#RegSubmitBTN_overlay{
     width: 100%;
     display: flex;
 	justify-content: center;
 	align-items: center;
+    margin-top: 0vw; 
+    margin-bottom: 0px;
 }
 
 #regForm_overlay p{
-    font-size: 1.13vw;
+    /* font-size: 1.13vw; */
+    font-size: 0.9vw;
     font-weight: bold;
     text-align: center;
+    margin-top: 0.7vw;
 }
 
 #loginBTN{
-    margin-top: 1vw;
+    margin-top: 0.5vw;
     width: 7vw;
-    /* height: 5vh; */
     height: 2.5vw;
     background-color: var(--color5);
     color:  var(--baground2);   
     border: 2px solid var(--color5);   
     border-radius: 4px;  
-    /* margin-left: 6vw; */
     font-size: 0.8vw;
     color: var(--color1);
+    margin-bottom: 1.5vw;
 }
 
 @media screen and (max-width: 601px){
-    #name a{
-        font-size: 2.5vw;
+    #registerOverlay_scroll{
+        background-color: var(--color1);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* overflow: scroll; */
+        height: 93.5vh;
+        width: 100%;
+        /* border: 2px solid red; */
+    }
+
+    #registerOverlay {
+        justify-content: start;
+        align-items: center;
+        width: 100%;
+        border-left: 0px solid var(--color7); 
+        border-right: 0px solid var(--color7); 
+        height: 200vw;
+    }
+    
+    #regTitle{
+        background-color: var(--color8);
+        width: 100%;
+        height: 17vw; 
+        border: 0px solid var(--color2);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 0px;
+    }
+
+    #regTitle h1{
+        font-size: 4.6vw;
+        margin-left: 0vw;
+        color: var(--color1);
+        margin-top: 8vw;
+    }   
+    
+    #regForm_overlay{
+        margin-top: 10vw;
+        width: 90%;
+        height: 136vw;
+        border: 0px solid black;
+    }
+
+    #regForm_overlay form{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .inputTextOverlay{
+        width: 98%;
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        font-size: 4vw;
+    }
+
+    .inputTextOverlay p{
+        margin-left: 3.5vw;
+        margin-bottom: 4px;
+        font-weight: bold;
+    }
+
+    #regForm_overlay form input{
+    outline-color: var(--color5);
+        width: 90%;
+        height: 11vw;
+        border: 1.5px solid var(--color7);   
+        border-radius: 9px;  
+        padding-left: 5.5vw;
+        padding-right: 2vw;
+        margin-bottom: 3vw;
+    }
+    
+    #regForm_overlay form :last-child button{
+        width: 24vw;
+        height: 9vw;
+        background-color: var(--color5);
+        color:  var(--baground2);   
+        border: 2px solid var(--color5);   
+        border-radius: 4px;  
+        font-size: 3vw;
+        color: var(--color1);
+    }
+    
+    #RegSubmitBTN_overlay{
+        margin-top: 2vw;
+        width: 100%;
+        display: flex;
+        margin-bottom: 4vw;
+    }
+    
+    #regForm_overlay p{
+        margin-top: 0px;
+        font-size: 3.5vw;
+        text-align: center;
+    }
+
+    #regForm_overlay p span{
+        color: var(--color5);
+    }
+    
+    #loginBTN{
+        margin-top: 1vw;
+        height: 9vw;
+        width: 24vw;
+        background-color: var(--color5);
+        color:  var(--baground2);   
+        border: 2px solid var(--color5);   
+        border-radius: 4px;  
+        font-size: 3vw;
+        color: var(--color1);
+        margin-bottom: 5vw;
     }
 }
 

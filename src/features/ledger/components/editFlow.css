@@ -1,4 +1,3 @@
-
 .Overlay {
     position: fixed;
     top: 0;
@@ -19,7 +18,7 @@
     background-color: var(--color1);
     border-radius: 10px;
     transition: display 4s;
-    /* box-shadow: 10px 10px 5px var(--color4); */
+    /* box-shadow: 10px 10px 5px var(--color5); */
 }
 
 .ReactModal__Overlay {
@@ -59,17 +58,17 @@ form{
     /* bottom: 4.5vw; */
     left: 30.7vw;
     right: 30.7vw;
-    background-color: var(--color4);
+    background-color: var(--color8);
     filter: blur(3px);
     z-index: -1;
     border-radius: 10px;
 }
+
 input{
     border-radius: 9px; 
-    height: 4.5vh;
     height: 2.3vw;
-    border: 2.5px solid var(--color4);
-    font-size: 0.8vw; 
+    border: 2.5px solid var(--color7);
+    font-size: 0.8vw;
 }
 
 button{
@@ -80,7 +79,7 @@ button{
     height: 2.3vw;
     border-radius: 4px;
     font-size: 0.8vw; 
-    color: var(--color5);
+    color: var(--color2);
 }
 /* 
 button:focus{
@@ -102,7 +101,7 @@ option{
     width: 100%;
     height: 6.5vh;
     height: 3.3vw;
-    border-bottom: 2px solid var(--color4);
+    border-bottom: 2px solid var(--color5);
     font-size: 0.7vw;
 }
 
@@ -139,6 +138,8 @@ option{
 }
 
 #accountOverlay button{
+    border-color: var(--color5);
+    color: var(--color5);
     /* margin-top: 1vh; */
     margin-top: 0.5vw;
     margin-left: 0.84vw;
@@ -191,11 +192,12 @@ option{
     width: 50%;
     
 }
+
 #savedTransactionOverlay label select{
     border-radius: 9px;
     height: 100%;
-    /* border: 2.5px solid var(--color4); */
-    border: 2px solid var(--color4);
+    /* border: 2.5px solid var(--color5); */
+    border: 2px solid var(--color7);
     height: 2.5vw;
     width: 100%;
     background-color: white;
@@ -233,7 +235,7 @@ option{
 }
 
 #savedTransactionOverlay div button:hover{
-    border: 2.5px solid var(--color4);
+    border: 2.5px solid var(--color5);
 }
 
 #categoryOverlay{
@@ -252,7 +254,7 @@ option{
 }
 
 #categoryOverlay select{
-    border: 2px solid var(--color4);
+    border: 2px solid var(--color7);
     background-color: white;
     border-radius: 9px;
     height: 2.5vw;
@@ -302,7 +304,7 @@ option{
 }
 
 #addCategoryOverlay button:hover{
-    border: 2.5px solid var(--color4);
+    border: 2.5px solid var(--color5);
 }
 
 #BTN_overlay{
@@ -322,4 +324,331 @@ option{
 
 #BTN_overlay div button{
     margin-left: 1.4vw;
+}
+
+@media screen and (max-width: 601px){
+    input{
+        border-radius: 9px; 
+        height: 8.3vw;
+        border: 2px solid var(--color7);
+        font-size: 3.5vw; 
+        height: 10vw;
+        font-size: 0.88em; 
+    }
+    
+    button{
+        background-color: var(--color1);
+        border: 2px solid var(--color5);
+        width: 20.8vw;
+        border-radius: 4px;
+        color: var(--color5);
+        height: 10vw;
+    }
+
+    select{
+        height: 10vw;
+    }
+
+    #editFormMobileOverlay{
+        width: 100%;
+        height: 85vh;
+        overflow: scroll; 
+    }
+
+    #editFormMobile{
+        width: 100%;
+        background-color: var(--color1);
+        justify-content: start;
+        font-size: 0.88em; 
+    }
+    
+    #record_Header_Overlay{
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        height: 10vw;
+        border-bottom: 2px solid var(--color5);
+    }
+    
+    #record_Header_Overlay h2{
+        font-size: 5.5em; 
+    }
+    
+    #record_Header_Overlay button{
+        margin-right: 6%;
+        width: 6.4vw;
+        height: 6.4vw;
+        border-radius: 0px;
+        border: 0px;
+
+        background-image: url(../../../icons/closeSquare_dark.png);
+        background-repeat: no-repeat;
+        background-origin: content-box;
+        background-position: center center;
+        background-size: auto;
+    
+        -moz-background-size: cover;
+        -ms-background-size: cover;
+        -o-background-size: cover;
+         background-size: cover;
+    }
+    
+    #descriptionOverlay{
+        margin-top: 4.5vw;
+        width: 90%;
+    }
+    
+    #descriptionOverlay input{
+        margin-top: 0.35vw;
+        width: 94%;
+        padding-left: 3%;
+        padding-right: 3%;
+        font-size: 0.88em; 
+    }
+    
+    #accountOverlay{
+        margin-top: 6vw;
+        margin-left: 5%;
+        width: 95%;        
+        font-size: 1em;        
+    }
+
+    #accountOverlay_p{
+        margin-left: 0px;
+        margin-bottom: 1vw;
+        font-weight: normal;
+        width: 100%;
+    }
+
+    #accountOverlay_p:after{
+        content:" ";
+        height: 1.5px;
+        width: calc(95% - 3.95em);
+        background: var(--color7);
+        display: block;
+        position: absolute;
+        top: 68%;
+        left: 3.95em;      /* change to em when the em font size for this p have been set */
+    }
+
+    #accountOverlay div{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    
+    #accountOverlay button{
+        border-color: var(--color5);
+        margin-right: 2.5vw;
+        margin-left: 0vw;
+        margin-bottom: 2vw;
+        font-size: 0.88em; 
+        word-wrap: break-word;
+        word-break: break-word;
+    }
+    
+    
+    #AmountOverlay{
+        margin-top: 0vw;
+        margin-bottom: 3vw;
+        width: 90%;
+        font-size: 1em; 
+    }
+
+    #AmountOverlay_p{
+        margin-left: 0px;
+        margin-bottom: 0px;
+        font-weight: normal;
+        width: 100%;
+    }
+
+    #AmountOverlay_p:after{
+        /* position: absolute; */
+        content:" ";
+        height: 1.5px;
+        /* width: 74.7vw; */
+        width: calc(100% - 3.8em);
+        background: var(--color7);
+        display: block;
+        position: absolute;
+        top: 68%;
+        left: 3.8em;      /* change to em when the em font size for this p have been set */
+    }
+    
+    #AmountOverlay div{
+        justify-content: space-between;
+        width: 100%;
+    }
+    
+    #AmountOverlay div div{
+        width: 50%;
+        margin-top: 1vw;
+        display: flex;
+        flex-direction: column;
+    }
+
+    #AmountOverlay div div:last-child{
+        align-items: flex-end;
+    }
+    #AmountOverlay div div:last-child span{
+        width: 97%;
+    }
+
+    
+    #AmountOverlay div div input{
+        margin-top: 0vw;
+        width: 74.6%;
+        width: 89%;
+        margin-left: 0%;
+        font-size: 0.88em; 
+    }
+
+    #savedTransactionOverlay{
+        margin-top: 1.8vw;
+        width: 90%;
+        height: 11vw;
+    }
+    
+    #savedTransactionOverlay label{
+        width: 48.2%;
+    }
+    
+    #savedTransactionOverlay label select{
+        border-radius: 9px;
+        height: 100%;
+        border: 2px solid var(--color7);
+        width: 100%;
+        background-color: white;
+        padding-left: 3%;
+        padding-right:0%;
+        height: 11vw;
+    }
+    
+    #savedTransactionOverlay div{
+        margin-left: 5%;
+        border-radius: 9px;
+        background-color: var(--color1);
+        width: 40%;
+        border-radius: 4px;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    #savedTransactionOverlay div button{
+        background-color: var(--color1);
+        border: 0px solid var(--color2);
+        width: 4.4vw;
+        height: 4.4vw;
+        border-radius: 4px;
+        background-image: url(../../../icons/saveTransaction_icon.png);
+        background-repeat: no-repeat;
+        background-origin: content-box;
+        background-position: center center;
+        background-size: auto;
+    
+        -moz-background-size: cover;
+        -ms-background-size: cover;
+        -o-background-size: cover;
+         background-size: cover;
+    }
+    
+    #savedTransactionOverlay div button:hover{
+        border: 2.5px solid var(--color5);
+    }
+    
+    #categoryOverlay{
+        margin-top: 3vw;
+        margin-bottom: 4vw;
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+    }
+
+    #categoryOverlay_p{
+        margin-bottom: 0.7vw;
+        width: 100%;
+    }
+
+    #categoryOverlay_p:after{
+        content:" ";
+        height: 1.5px;
+        width: calc(99% - 4em);
+        background: var(--color7);
+        display: block;
+        position: absolute;
+        top: 68%;
+        left: 4.2em;      /* change to em when the em font size for this p have been set */
+    }
+    
+    #categoryOverlay label{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+    }
+    
+    #categoryOverlay select{
+        border: 2px solid var(--color7);
+        background-color: white;
+        border-radius: 9px;
+        height: 11vw;
+        width: 50%;
+        flex-wrap: wrap;
+        padding-left: 0%;
+    }
+    
+    #addCategoryOverlay{
+        width: 50%;
+        margin-left: 2.5vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    #addCategoryOverlay input{
+        margin-top: 0.0vw;
+        padding-left: 3%;
+        padding-right: 3%;
+        height: 10.2vw;
+        font-size: 0.88em; 
+    }
+    
+    #addCategoryOverlay button{
+        border: 0px;
+        width: 4.3vw;
+        height: 4.3vw;
+        border-radius: 9px;
+        margin-left: 1%;
+        background-image: url(../../../icons/add_circle.png);
+        background-repeat: no-repeat;
+        background-origin: content-box;
+        background-position: center center;
+        background-size: auto;
+    
+        -moz-background-size: cover;
+        -ms-background-size: cover;
+        -o-background-size: cover;
+         background-size: cover;
+    }
+    
+    #addCategoryOverlay button:hover{
+        border: 2.5px solid var(--color5);
+    }
+    
+    #BTN_overlay{
+        width: 90%;
+        display: flex;
+        flex-direction: row-reverse;
+        margin-top: 4.5vw;
+        margin-bottom: 17.7vw;
+    }
+    
+    #BTN_overlay div{
+        margin-right: 2vw;
+    }
+    
+    #BTN_overlay div button{
+        margin-left: 1.4vw;
+        font-size: 0.88em; 
+        font-size: 0.88em; 
+    }
 }

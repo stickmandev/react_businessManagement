@@ -49,30 +49,30 @@ function Login() {
         <div id="loginForm_overlay">
           <form id="loginForm" onSubmit={formSubmit}>
               <div className="inputTextOverlay">
-                E-mail<br/>
-                <input className="input_form" autoFocus type="text" id="email" placeholder="my_mail@mail.com" onChange={(e)=>{setEmail(e.target.value)}} value={email} /><br/><br/><br/>
+                <p>E-mail</p> 
+                <input className="input_form" autoFocus type="text" id="email" placeholder="my_mail@mail.com" onChange={(e)=>{setEmail(e.target.value)}} value={email} />
               </div>
               
               <div className="inputTextOverlay">
-                Password<br/>
-                <input className="input_form" type="password" id="password" placeholder="************" onChange={(e)=>{setPassword(e.target.value)}} value={password} /><br/><br/>
+                <p>Password</p>
+                <input className="input_form" type="password" id="password" placeholder="************" onChange={(e)=>{setPassword(e.target.value)}} value={password} />
               </div>
               
               
               <div style={{margin: "1em", color: "red"}}>{message}</div>
 
-              <p>Forgot password? Click Here</p><br/>
+              <p>Forgot your password? <span>Click Here</span></p>
               
               <div id="submitBTN_overlay">
-                <button id="submit" type="submit" value="Login" >Login</button>
+                <button id="submit" type="submit" value="Login" >LOG IN</button>
               </div>
               
-          </form><br/><br/><br/>
+          </form>
 
-          <p>don't have an account?</p>
+          <p>You don't have an account?</p>
 
           <Link to="/registration" id='registerBTN_Overlay'>
-            <button id="registerBTN">register</button>
+            <button id="registerBTN">REGISTER</button>
           </Link>
         </div>
         

@@ -1,0 +1,73 @@
+.mobile_navs{
+  width: 6vw;
+  height: 6vw;
+  /* background-color: aqua; */
+  margin-left: 2vw;
+}
+
+#apps{
+  background-image: url(../../../icons/mobile_icon/app.png);
+  background-repeat: no-repeat;
+  background-origin: content-box;
+  background-position: center center;
+  background-size: auto;
+
+  -moz-background-size: cover;
+  -ms-background-size: cover;
+  -o-background-size: cover;
+   background-size: cover;
+}
+
+#search{
+  background-image: url(../../../icons/mobile_icon/search.png);
+  background-repeat: no-repeat;
+  background-origin: content-box;
+  background-position: center center;
+  background-size: auto;
+
+  -moz-background-size: cover;
+  -ms-background-size: cover;
+  -o-background-size: cover;
+   background-size: cover;
+}
+
+#notifications{
+  background-image: url(../../../icons/mobile_icon/notification.png);
+  background-repeat: no-repeat;
+  background-origin: content-box;
+  background-position: center center;
+  background-size: auto;
+
+  -moz-background-size: cover;
+  -ms-background-size: cover;
+  -o-background-size: cover;
+   background-size: cover;
+}
+
+#profile{
+  background-color: var(--color1);
+  border-radius: 15px;
+  /* background-image: url(../../../icons/closeSquare_active.png);
+  background-repeat: no-repeat;
+  background-origin: content-box;
+  background-position: center center;
+  background-size: auto;
+
+  -moz-background-size: cover;
+  -ms-background-size: cover;
+  -o-background-size: cover;
+   background-size: cover; */
+}
+
+#options{
+  background-image: url(../../../icons/mobile_icon/options_white.png);
+  background-repeat: no-repeat;
+  background-origin: content-box;
+  background-position: center center;
+  background-size: auto;
+
+  -moz-background-size: cover;
+  -ms-background-size: cover;
+  -o-background-size: cover;
+   background-size: cover;
+}

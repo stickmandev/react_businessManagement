@@ -20,12 +20,15 @@ function Registration() {
   
 
   return (
-    <section>
-        <div id="registerOverlay">
+    <section id='registerSection'>
+        <div id="registerOverlay_scroll">
+          <div id="registerOverlay">
             {RegStatus}
+            {/* <EmailSent/> */}
+          </div>
         </div>
     </section>
   );
 }
 
-export default Registration
+export default Registration 
