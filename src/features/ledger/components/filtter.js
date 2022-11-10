@@ -16,16 +16,23 @@ import SubNav_mobile from '../../defualt_Layouts/subNav_mobile';
 import filter_icon_hover_icon from "../../../icons/filter_hover.png"
 
 const Filtter = () => {
+    const [stream, setStream] = useState([]);
+    const {streamList, setStreamList} = useGlobalState([]);
+    const {streamFilter, setStreamFilter} = useGlobalState([]);
+
     const [categoryList, setcategoryList] = useState("");
     const [categorySelected, setCategorySelected] = useState("");
     const [newCategory, setNewCategory] = useState("");
+    const [categorySelectFontWieght, setCategorySelectFontWieght] = useState("bolder");
+    const [categorySelectColor, setCategorySelectColor] = useState("");
+
     const [dateFrom, setDateFrom] = useState("");
     const [dateTo, setDateTo] = useState("");
     const [dateFromDisp, setDateFromDisp] = useState("Old records");
     const [dateToDisp, setDateToDisp] = useState("Today");
     const [filterError, setFilterError] = useState("");
-    const [categorySelectFontWieght, setCategorySelectFontWieght] = useState("bolder");
-    const [categorySelectColor, setCategorySelectColor] = useState("");
+
+    // const [ButtonColorToggle, setButtonButtonToggleToggle] = useState(false);
 
     const {start_date, setStart_date} = useGlobalState('');
     const {end_date, setEnd_date} = useGlobalState('');
@@ -39,7 +46,52 @@ const Filtter = () => {
     }
 
 
-    
+    // set stream data............................................................................................
+    useEffect(() => {
+        setStream(
+          streamList.map(function(item){
+            return(
+                <button 
+                    className='streamBTNs' 
+                    id={'stream'+item.id} 
+                    required 
+                    onClick={(e)=>{ 
+                        e.preventDefault(); 
+                        
+                        
+                        const streamBTNs = document.getElementsByClassName('streamBTNs')
+                        const elemBackgroundColor = window.getComputedStyle(e.target).backgroundColor
+
+                        if(elemBackgroundColor !== 'rgb(127, 119, 224)'){
+                            e.target.style.backgroundColor = 'var(--color5)'
+                            e.target.style.color = 'var(--textColor1)'
+                            setStreamFilter(
+                                oldArray => [
+                                    ...oldArray,(
+                                        `selected_id=${item.id}&`
+                                    )
+                                ]
+                            );
+                        }else{
+                            e.target.style.backgroundColor = 'var(--color1)'
+                            e.target.style.color = 'var(--textColor5)'
+                            setStreamFilter(
+                                oldArray => [
+                                    ...oldArray.filter(
+                                        (n) =>  n !== `selected_id=${item.id}&`
+                                    )
+                                ]
+                            );
+                        }
+                    } 
+                }>
+                    {item.name}
+                </button>
+            )
+          })
+        );
+        console.log(streamFilter)
+    }, [streamList,streamFilter]);
 
     // GET category ..................................................................................................
     const getCategories_success = async(data) => {
@@ -58,7 +110,6 @@ const Filtter = () => {
 
     const load_categories = () => {
         get_categories(getCategories_success, getCategories_fail, access, setAccess)
-        
     }
 
     useEffect(() => {
@@ -148,6 +199,13 @@ const Filtter = () => {
                                 {/* <option value="grapefruit">coco</option> */}
                             </select>
                         </div>
+
+                        <div id='filter_accountOverlay'>
+                            <strong>Account</strong>
+                            <div>
+                              {stream}
+                            </div>
+                        </div><br/>
                         
                         <div id='filterDate_overlay'>
                             <strong><p id='setPeriod_p'>Set period</p></strong>

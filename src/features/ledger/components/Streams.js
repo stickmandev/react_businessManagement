@@ -13,6 +13,7 @@ function Streams() {
   // console.log(load_flow)
   const {streamList, setStreamList} = useGlobalState([]);
   const {stream, setStream} = useGlobalState([]);
+  const {streamFilter, setStreamFilter} = useGlobalState([]);
   const {priodStart, setPriodStart} = useGlobalState([]);
   const {priodEnd, setPriodEnd} = useGlobalState([]);
   
@@ -64,7 +65,7 @@ function Streams() {
   )
 
   const getStreamData = async()=>{
-    await get_cashStream(Streampage, stream_Success, (text)=>{console.log("Error: ", text)}, access, set_Access );
+    await get_cashStream(Streampage, streamFilter, stream_Success, (text)=>{console.log("Error: ", text)}, access, set_Access );
   };
 
   useEffect(()=>{

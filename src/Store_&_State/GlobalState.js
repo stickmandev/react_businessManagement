@@ -8,6 +8,7 @@ export default useGlobalState
 export const GlobalStateProvider = ({children}) => {
   const [stream, setStream] = useState('')
   const [streamList, setStreamList] = useState([])
+  const [streamFilter, setStreamFilter] = useState('')
   const [priodStart, setPriodStart] = useState([])
   const [priodEnd, setPriodEnd] = useState([])
   
@@ -44,6 +45,7 @@ export const GlobalStateProvider = ({children}) => {
       { 
         stream, setStream, 
         streamList, setStreamList,
+        streamFilter, setStreamFilter,
         priodStart, setPriodStart,
         priodEnd, setPriodEnd,
         

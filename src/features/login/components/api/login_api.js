@@ -1,6 +1,6 @@
 import {backendURL} from "../../../../backendURL"
 
-const login_api = async (email, password, success, fail) => {
+const login_api = async (path, email, password, success, fail) => {
   const response = await fetch(
         `${backendURL}/user/login/`,
         {
@@ -21,7 +21,7 @@ const login_api = async (email, password, success, fail) => {
   const text = await response.text();
   if (response.status === 200) {
     // console.log("success", JSON.parse(text));
-    success(JSON.parse(text));
+    success(JSON.parse(text), path);
   } else {
     console.log("failed", text);
     Object.entries(JSON.parse(text)).forEach(([key, value])=>{

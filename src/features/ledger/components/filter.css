@@ -44,6 +44,7 @@ select{
     margin-top: 3vw;
 }
 
+
 #filterCategoryOverlay{
     margin-top: 0vw;
     margin-bottom: 4vw;
@@ -130,7 +131,19 @@ select{
     margin-top: 4vw;
     display: flex;
     flex-direction: row-reverse;
+}
 
+#filter_accountOverlay button{
+    margin-top: 1vh;
+    margin-top: 0.5vw;
+    margin-right: 0.82vw;
+    color: var(--textColor5);
+}
+
+#filter_accountOverlay button:hover{
+    background-color: unset;
+    color: var(--textColor5);
+    border: 2px solid var(--color7);
 }
 
 #filter_btn{
@@ -143,6 +156,11 @@ select{
 
 #FilterError{
     color: red;
+}
+
+.streamBTNs{
+    background-color: unset;
+    border: 2.5px solid var(--color5);
 }
 
 @media screen and (max-width: 601px){
@@ -205,7 +223,7 @@ select{
     #filterCategoryOverlay_p:after{
         content:" ";
         height: 1.5px;
-        width: calc(93.4% - 4em);
+        width: calc(96% - 4.2em);
         background: var(--color7);
         display: block;
         position: absolute;

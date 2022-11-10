@@ -126,6 +126,14 @@ form{
 }
 
 @media screen and (max-width: 601px){
+    .desktop{
+        display: none !important;
+    }
+
+    .mobile{
+        display: flex !important;
+    }  
+    
     #loginOverlay {
         justify-content: start;
         align-items: center;
@@ -168,7 +176,7 @@ form{
         transition: display 4s;
         justify-content: start;
         font-size: 3.5vw; 
-        overflow: scroll; 
+        /* overflow: scroll;  */
     }
 
     .inputTextOverlay{
@@ -204,6 +212,10 @@ form{
         border-radius: 4px;  
         font-size: 3vw;
         color: var(--color1);
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
     
     #submitBTN_overlay{

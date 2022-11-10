@@ -21,21 +21,26 @@ function Login() {
     },[]
   )
 
-  const success = async (text)=> {
+  const success = async (text, path)=> {
     console.log("You are logged in!");
     await localStorage.setItem("refreshToken", text.refresh);
     setAccess(
-      // {
         text.access,
-      // }
     )
-    navigate("/ledger");
+    const currentMobileDisplayValue = document.getElementsByClassName('mobile')
+    navigate(path);
   };
 
   const formSubmit = (e) => {
     e.preventDefault();
     console.log("Loggin in with", email, password);
-    login_api(email, password, success, (text)=>{setMessage(text)});
+    login_api("/ledger", email, password, success, (text)=>{setMessage(text)});
+  };
+
+  const mobileFormSubmit = (e) => {
+    e.preventDefault();
+    console.log("Loggin in with", email, password);
+    login_api("/MobileLedger", email, password, success, (text)=>{setMessage(text)});
   };
 
   return (
@@ -47,7 +52,7 @@ function Login() {
         </div>
 
         <div id="loginForm_overlay">
-          <form id="loginForm" onSubmit={formSubmit}>
+          <form id="loginForm">
               <div className="inputTextOverlay">
                 <p>E-mail</p> 
                 <input className="input_form" autoFocus type="text" id="email" placeholder="my_mail@mail.com" onChange={(e)=>{setEmail(e.target.value)}} value={email} />
@@ -64,7 +69,8 @@ function Login() {
               <p>Forgot your password? <span>Click Here</span></p>
               
               <div id="submitBTN_overlay">
-                <button id="submit" type="submit" value="Login" >LOG IN</button>
+                <button className='desktop submit' type="submit" value="Login" onClick={formSubmit}>LOG IN</button>
+                <button className='mobile submit' type="submit" value="Login" onClick={mobileFormSubmit}>LOG IN</button>
               </div>
               
           </form>

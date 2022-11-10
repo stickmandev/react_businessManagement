@@ -44,7 +44,7 @@ export const get_cashFlow = async ( success, fail, start_date, end_date, filterC
             // console.log('faillllled')
           });
         }
-      }else if(search ==''|| filterCategory==='' || filterCategory===undefined){
+      }else if( filterCategory==='' || filterCategory===undefined){
         // console.log('fetching cashflow data')
         // fetching cashflow data
         const response = await fetch(
